@@ -1,0 +1,30 @@
+WORKDIR = `pwd`
+
+CC = gcc
+CXX = g++
+LD = g++
+
+INC = -I../dependencies/freeglut/include -I../dependencies/glm/include
+CFLAGS = -Wall -std=c++11 -fPIC -fexceptions
+LIBDIR = -L /usr/lib/libGL.so /usr/lib/libglut.so 
+LIB = -lGL -lglut
+
+CFLAGS_DEBUG = $(CFLAGS) -g
+RESINC_DEBUG = $(RESINC)
+OBJDIR_DEBUG = obj/Debug
+OUT_DEBUG = bin/Debug/libengine.so
+OBJ_DEBUG = $(OBJDIR_DEBUG)/engine.o
+
+$(OBJDIR_DEBUG)/%.o: %.cpp
+	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c $^ -o $@
+
+$(OUT_DEBUG): $(OBJDIR_DEBUG)/engine.o $(OBJDIR_DEBUG)/texture.o
+	$(LD) -shared $(LIBDIR) $^ -o $@ $(LIB) 
+
+%.cpp: %.h
+
+clean:
+	rm -f $(OUT_DEBUG)
+	rm -rf $(OBJDIR_DEBUG)/*
+
+.PHONY: clean

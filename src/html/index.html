@@ -7,58 +7,130 @@
   <meta name="description" content="Italian Olympiads in Informatics training website" >
   <title >Title</title>
   <title>Italian Olympiads in Informatics training website</title>
+
+  <link href="../libs/MDB5-STANDARD-UI-KIT-Free-6.0.1/css/mdb.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <script src='../libs/fontawesome-free-6.2.1-web/js/all.js' crossorigin='anonymous'></script>
+  <link href="../css/main.css" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <div class="bg-dark collapse" id="navbarHeader">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-8 col-md-7 py-4">
-                <h4 class="text-white">About</h4>
-                <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
-              </div>
-              <div class="col-sm-4 offset-md-1 py-4">
-                <h4 class="text-white">Contact</h4>
-                <ul class="list-unstyled">
-                  <li><a href="#" class="text-white">Follow on Twitter</a></li>
-                  <li><a href="#" class="text-white">Like on Facebook</a></li>
-                  <li><a href="#" class="text-white">Email me</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="navbar navbar-dark bg-dark shadow-sm">
-          <div class="container">
-            <a href="#" class="navbar-brand d-flex align-items-center">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container-fluid">
+
+            <a href="#" class="navbar-brand">
                 <img src="../img/logo.png" alt="cat" height="32">
             </a>
-            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+           
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-          </div>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <div class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                </div>
+
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <i class="fa fa-home" aria-hidden="true"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa-solid fa-clipboard-question"></i> Problems
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa-solid fa-ranking-star"></i> Ranking
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa-solid fa-comments"></i> Forum
+                        </a>
+                    </li>
+                  </ul>
+
+                <div class="d-flex">
+                
+                    <button class="btn btn-outline-success ms-lg-4 me-2 fw-bold  btn-nav" type="button"> Register</button>
+                    <button class="btn btn-success fw-bold  btn-nav" type="button">Login</button>
+
+                    <div class="dropdown my-outo ms-4 me-2 mt-2">
+                        <a class="dropdown-toggle" href="#" id="Dropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                            <i class="flag-united-kingdom flag m-0"></i> English
+                        </a>
+                    
+                        <ul class="dropdown-menu" aria-labelledby="Dropdown">
+                            <li>
+                                <a class="dropdown-item" href="#"><i class="flag-china flag"></i>中文</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"><i class="flag-japan flag"></i>日本語</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"><i class="flag-germany flag"></i>Deutsch</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"><i class="flag-france flag"></i>Français</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"><i class="flag-spain flag"></i>Español</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"><i class="flag-russia flag"></i>Русский</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"><i class="flag-portugal flag"></i>Português</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-    </header>
+    </nav>
+
 
     <main>
-        <section class="py-5 text-center container">
+        <section class="py-5 text-center bg-light mb-5">
             <div class="row py-lg-5">
-            <div class="col-lg-6 col-md-8 mx-auto">
-                <h1 class="fw-strong">Italian Olympiads in Informatics training website</h1>
-                <p class="lead text-muted">Welcome to the official training website for OII! Here you will be able to try and solve programming tasks by coding a solution in a programming language of your choice.</p>
-                <p>
-                    <svg height="36"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
-                </p>
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-strong">Italian Olympiads in Informatics training website</h1>
+                    <p class="lead text-muted">Welcome to the official training website for OII! Here you will be able to try and solve programming tasks by coding a solution in a programming language of your choice.</p>
+                    <p>
+                        <svg height="36"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+                    </p>
+                </div>
             </div>
+        </section>
+
+        <section class="card container mx-auto py-5">
+
+            <div class="row ">
+                <div class="col-4 mx-auto">
+                    <img src="../img/student.png" class="img-fluid rounded-start" alt="...">
+                </div>
+                
+                <div class="col-8">
+                    <div class="card-body ">
+                        <h2 class="card-title">Learn progressively</h5>
+
+                        <p class="card-text ">With algobadge you will be guided through a curated selection of tasks to solve, ordered by increasing difficulty, while being able to explore new algorithmic techniques in a gradual and effective way.</p>
+                    </div>
+                </div>
             </div>
+
         </section>
     </main>
 
    
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src='../libs/fontawesome-free-6.2.1-web/js/all.js' crossorigin='anonymous'></script>
+<script src='../libs/MDB5-STANDARD-UI-KIT-Free-6.0.1/js/mdb.min.js' crossorigin='anonymous'></script>
+<script src='../libs/jquery-3.6.1/jquery-3.6.1.min' crossorigin='anonymous'></script>
+<script src='../js/main.js' crossorigin='anonymous'></script>
 </body>
 </html>

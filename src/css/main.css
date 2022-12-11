@@ -6,3 +6,15 @@
 .card {
     border: none !important;
  }
+
+ .easy-color {
+    color: rgb(38, 154, 38) !important;
+ }
+
+ .medium-color {
+    color: orange !important;
+ }
+
+.hard-color {
+    color: red !important;
+ }

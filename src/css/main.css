@@ -51,3 +51,7 @@
 .hard-color {
     color: red !important;
  }
+
+ .w-70 {
+    width: 70% !important;
+ }

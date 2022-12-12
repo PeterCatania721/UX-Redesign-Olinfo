@@ -193,68 +193,98 @@
 
                 </div>
 
-                <div class="col-4 ps-4">
+                <div class="col-4 ps-3">
                   <h2>Filters</h2>
+                  
+                    <div class="row mt-2 w-auto">
+                      <div class="col">
+                        <h5 class="mb-1">Type</h5>
 
-                  <div class="row">
-                    <div class="col-8">
-                      <h5>Type</h5>
+                        <div class="row ms-1">
+                          <div class="col-12 col-lg-6 form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="sortingCheckbox" checked>
+                            <label class="form-check-label" for="sortingCheckbox">Sorting</label>
+                          </div>
 
-                      <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="sortingCheckbox" checked>
-                        <label class="form-check-label" for="sortingCheckbox">Sorting</label>
+                          <div class="col-12 col-lg-6 form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="hashtableCheckbox" >
+                            <label class="form-check-label" for="hashtableCheckbox">
+                              <div class="row">
+                                <div class="col-8 col-lg-8 col-xxl-12 text-truncate w-auto">
+                                  Hash Table
+                                </div>
+                              </div>
+                            </label>
+                          </div>
+
+                          <div class="col-12 col-lg-6 form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="binarySearchCheckbox" checked>
+                            <label class="form-check-label" for="binarySearchCheckbox">
+                              <div class="row">
+                                <div class="col-11 col-sm-12 text-truncate">
+                                  Binary Search
+                                </div>
+                              </div>
+                            </label>
+                          </div>
+
+                          <div class="col-12 col-lg-6 form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="treeCheckbox" checked>
+                            <label class="form-check-label" for="treeCheckbox">
+                              <div class="row">
+                                <div class="col-8 col-lg-8 col-xxl-12 text-truncate w-auto">
+                                  Tree
+                                </div>
+                              </div>
+                            </label>
+                          </div>
+
+                          <div class="col-12 col-lg-6 form-check form-switch text-truncate">
+                            <input class="form-check-input" type="checkbox" id="dynamicPCheckbox" >
+                            <label class="form-check-label" for="dynamicPCheckbox">
+                              <div class="row">
+                                <div class="col-8 col-sm-8 col-lg-8 col-xxl-12 text-truncate">
+                                  Dynamic programming
+                                </div>
+                              </div>
+                            </label>
+                          </div>
+
+                          <div class="col-6 form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="greedyCheckbox" checked>
+                            <label class="form-check-label w-auto" for="greedyCheckbox">Greedy</label>
+                          </div>
+                        </div>
+
                       </div>
-
-                      <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="hashtableCheckbox" >
-                        <label class="form-check-label" for="hashtableCheckbox">Hash Table</label>
-                      </div>
-
-                      <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="binarySearchCheckbox" checked>
-                        <label class="form-check-label" for="binarySearchCheckbox">Binary Search</label>
-                      </div>
-
-                      <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="treeCheckbox" checked>
-                        <label class="form-check-label" for="treeCheckbox">Tree</label>
-                      </div>
-
-                      <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="dynamicPCheckbox" >
-                        <label class="form-check-label" for="dynamicPCheckbox">Dynamic programming</label>
-                      </div>
-
-                      <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="greedyCheckbox" checked>
-                        <label class="form-check-label" for="greedyCheckbox">Greedy</label>
-                      </div>
-
                     </div>
 
-            
+                    <div class="row mt-2">
+                      <div class="col">
+                        <h5 class="mb-1">Difficulty</h5>
 
-                    <div class="col-4">
-                      <h5>Difficulty</h5>
+                        <div class="row ms-1">
+                          <div class="col-12 col-lg-6 form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="easyCheckbox" checked>
+                            <label class="form-check-label" for="easyCheckbox">Easy</label>
+                          </div>
+      
+                          <div class="col-12 col-lg-6 form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="mediumCheckbox" checked>
+                            <label class="form-check-label" for="mediumCheckbox">Medium</label>
+                          </div>
+      
+                          <div class="col-12 col-lg-6 form-check form-switch ">
+                            <input class="form-check-input" type="checkbox" id="hardCheckbox" checked>
+                            <label class="form-check-label" for="hardCheckbox">Hard</label>
+                          </div>
+                        </div>
 
-                      <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="easyCheckbox" checked>
-                        <label class="form-check-label" for="easyCheckbox">Easy</label>
-                      </div>
-  
-                      <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="mediumCheckbox" checked>
-                        <label class="form-check-label" for="mediumCheckbox">Medium</label>
-                      </div>
-  
-                      <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="hardCheckbox" checked>
-                        <label class="form-check-label" for="hardCheckbox">Hard</label>
                       </div>
                     </div>
 
-                  </div>
                 </div>
+        
             </div>
         </section>
 

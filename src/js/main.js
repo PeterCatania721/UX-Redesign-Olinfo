@@ -10,7 +10,9 @@
    };
 })(jQuery);
 
-$('.card-body').vAlign();
+$(document).load(function () {
+    $('.card-body').vAlign();
+});
 
 $( window ).resize(function() {
     $('.card-body').vAlign();

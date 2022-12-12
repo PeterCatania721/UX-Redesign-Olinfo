@@ -10,7 +10,7 @@
    };
 })(jQuery);
 
-$(document).load(function () {
+$(window).on('load', function() {
     $('.card-body').vAlign();
 });
 

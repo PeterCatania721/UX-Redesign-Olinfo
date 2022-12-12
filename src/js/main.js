@@ -1,3 +1,7 @@
+$(document).ready(function () {
+    $('#problems-table').DataTable();
+});
+
 (function ($) {
     // VERTICALLY ALIGN FUNCTION
     $.fn.vAlign = function() {

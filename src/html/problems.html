@@ -7,12 +7,13 @@
     <meta name="author" content="Peter Catania, Mattia Toscanelli">
     <link rel="icon" href="../img/favicon.ico">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="../fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../flagicon/css/flag-icons.min.css">
     <link rel="stylesheet" href="../css/main.css">
     <title>Homepage</title>
 </head>
-<body>
+<body class="bg-light">
     <!--NAVBAR-->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -84,116 +85,88 @@
 
     <!--MAIN-->
     <main>
-      
-        
         <section class="container mt-5">
+
             <div class="row">
-                <div class="col-8 pe-3">
+                <div class="col-12 col-lg-7 pe-3">
                   <h2>Problems</h2>
-                  <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
       
-                  <table class="table table-striped mb-4 mt-3 border border-3 border-dark">
-                    <thead>
-                      <tr>
-                        <th scope="col">Title</th>
-                        <th scope="col">Type</th>
-                        <th scope="col">Difficulty</th>
-                      </tr>
-                    </thead>
-                  <tbody>
-                    <tr>
-                      <td>Title #1</td>
-                      <td><span class="badge rounded-pill bg-secondary"> Sorting </span></td>
-                      <td class="medium-color">Medium</td>
-                    </tr>
-                    <tr>
-                      <td>Title #2</td>
-                      <td><span class="badge rounded-pill bg-secondary"> Binary Search </span></td>
-                      <td class="easy-color">Easy</td>
-                    </tr>
-                    <tr>
-                      <td>Title #3</td>
-                      <td><span class="badge rounded-pill bg-secondary"> Tree </span></td>
-                      <td class="medium-color">Medium</td>
-                    </tr>
-                    <tr>
-                      <td>Title #4</td>
-                      <td><span class="badge rounded-pill bg-secondary"> Tree </span></td>
-                      <td class="hard-color">Hard</td>
-                    </tr>
-                    <tr>
-                      <td>Title #5</td>
-                      <td><span class="badge rounded-pill bg-secondary"> Sorting </span></td>
-                      <td class="easy-color">Easy</td>
-                    </tr>
-                    <tr>
-                      <td>Title #6</td>
-                      <td><span class="badge rounded-pill bg-secondary"> Greedy </span></td>
-                      <td class="medium-color">Medium</td>
-                    </tr>
-                    <tr>
-                      <td>Title #7</td>
-                      <td><span class="badge rounded-pill bg-secondary"> Tree </span></td>
-                      <td class="easy-color">Easy</td>
-                    </tr>
-                    <tr>
-                      <td>Title #8</td>
-                      <td><span class="badge rounded-pill bg-secondary"> Greedy </span></td>
-                      <td class="medium-color">Medium</td>
-                    </tr>
-                    <tr>
-                      <td>Title #9</td>
-                      <td><span class="badge rounded-pill bg-secondary"> Binary Search </span></td>
-                      <td class="hard-color">Hard</td>
-                    </tr>
-                    <tr>
-                      <td>Title #10</td>
-                      <td><span class="badge rounded-pill bg-secondary"> Sorting </span></td>
-                      <td class="easy-color">Easy</td>
-                    </tr>
-         
-         
-                  </tbody>
-                
-                  </table>
-
-                  <div class="row">
-                      <div class="col-6">
-                        <div class="btn-group dropup">
-                          <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            10 problems/page
-                          </button>
-                          <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">10</a></li>
-                            <li><a class="dropdown-item" href="#">20</a></li>
-                            <li><a class="dropdown-item" href="#">30</a></li>
-                          </ul>
-                        </div>
-                      </div>
-
-                      <div class="col-6 text-end">
-                        <div class="btn-group" role="group" aria-label="Select Page">
-                          <input type="radio" class="btn-check" name="btnradio" id="btnradiob" autocomplete="off" disabled>
-                          <label class="btn btn-outline-secondary" for="btnradiob"> < </label>
-
-                          <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                          <label class="btn btn-outline-secondary" for="btnradio1">1</label>
-                        
-                          <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                          <label class="btn btn-outline-secondary" for="btnradio2">2</label>
-                        
-                          <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                          <label class="btn btn-outline-secondary" for="btnradio3">3</label>
-
-                          <input type="radio" class="btn-check" name="btnradio" id="btnradiof" autocomplete="off" >
-                          <label class="btn btn-outline-secondary" for="btnradiof"> > </label>
-                        </div>
-                      </div>
+                  <div class="dataTables_wrapper dt-bootstrap5">
+                    <div class="row dt-row">
+                      <table id="problems-table" class="table dataTable table-striped mb-4 mt-3 table-responsive shadow-sm">
+                        <thead class="table-dark">
+                          <tr>
+                            <th class="sorting" tabindex="0" scope="col">Title</th>
+                            <th class="sorting" tabindex="1" scope="col">Type</th>
+                            <th class="sorting" tabindex="2" scope="col">Difficulty</th>
+                          </tr>
+                        </thead>
+                      <tbody>
+                        <tr>
+                          <td>Title #1</td>
+                          <td><span class="badge rounded-pill bg-secondary"> Sorting </span></td>
+                          <td class="medium-color">Medium</td>
+                        </tr>
+                        <tr>
+                          <td>Title #2</td>
+                          <td><span class="badge rounded-pill bg-secondary"> Binary Search </span></td>
+                          <td class="easy-color">Easy</td>
+                        </tr>
+                        <tr>
+                          <td>Title #3</td>
+                          <td><span class="badge rounded-pill bg-secondary"> Tree </span></td>
+                          <td class="medium-color">Medium</td>
+                        </tr>
+                        <tr>
+                          <td>Title #4</td>
+                          <td><span class="badge rounded-pill bg-secondary"> Tree </span></td>
+                          <td class="hard-color">Hard</td>
+                        </tr>
+                        <tr>
+                          <td>Title #5</td>
+                          <td><span class="badge rounded-pill bg-secondary"> Sorting </span></td>
+                          <td class="easy-color">Easy</td>
+                        </tr>
+                        <tr>
+                          <td>Title #6</td>
+                          <td><span class="badge rounded-pill bg-secondary"> Greedy </span></td>
+                          <td class="medium-color">Medium</td>
+                        </tr>
+                        <tr>
+                          <td>Title #7</td>
+                          <td><span class="badge rounded-pill bg-secondary"> Tree </span></td>
+                          <td class="easy-color">Easy</td>
+                        </tr>
+                        <tr>
+                          <td>Title #8</td>
+                          <td><span class="badge rounded-pill bg-secondary"> Greedy </span></td>
+                          <td class="medium-color">Medium</td>
+                        </tr>
+                        <tr>
+                          <td>Title #9</td>
+                          <td><span class="badge rounded-pill bg-secondary"> Binary Search </span></td>
+                          <td class="hard-color">Hard</td>
+                        </tr>
+                        <tr>
+                          <td>Title #10</td>
+                          <td><span class="badge rounded-pill bg-secondary"> Sorting </span></td>
+                          <td class="easy-color">Easy</td>
+                        </tr>
+            
+            
+                      </tbody>
+                    
+                      </table>
+                    </div>
                   </div>
+              </div>
 
+                <div class="nav-item py-1 col-12 col-lg-auto">
+                  <div class="vr d-none d-lg-flex h-100 mx-lg-2"></div>
+                  <hr class="d-lg-none text-50">
                 </div>
 
-                <div class="col-4 ps-3">
+                <div class="col-12 col-lg-4 ps-3">
                   <h2>Filters</h2>
                   
                     <div class="row mt-2 w-auto">
@@ -201,12 +174,13 @@
                         <h5 class="mb-1">Type</h5>
 
                         <div class="row ms-1">
-                          <div class="col-12 col-lg-6 form-check form-switch">
+
+                          <div class="col-6 form-check form-switch">
                             <input class="form-check-input" type="checkbox" id="sortingCheckbox" checked>
                             <label class="form-check-label" for="sortingCheckbox">Sorting</label>
                           </div>
 
-                          <div class="col-12 col-lg-6 form-check form-switch">
+                          <div class="col-6 form-check form-switch">
                             <input class="form-check-input" type="checkbox" id="hashtableCheckbox" >
                             <label class="form-check-label" for="hashtableCheckbox">
                               <div class="row">
@@ -217,7 +191,7 @@
                             </label>
                           </div>
 
-                          <div class="col-12 col-lg-6 form-check form-switch">
+                          <div class="col-6 form-check form-switch">
                             <input class="form-check-input" type="checkbox" id="binarySearchCheckbox" checked>
                             <label class="form-check-label" for="binarySearchCheckbox">
                               <div class="row">
@@ -228,7 +202,7 @@
                             </label>
                           </div>
 
-                          <div class="col-12 col-lg-6 form-check form-switch">
+                          <div class="col-6 form-check form-switch">
                             <input class="form-check-input" type="checkbox" id="treeCheckbox" checked>
                             <label class="form-check-label" for="treeCheckbox">
                               <div class="row">
@@ -239,7 +213,7 @@
                             </label>
                           </div>
 
-                          <div class="col-12 col-lg-6 form-check form-switch text-truncate">
+                          <div class="col-6 form-check form-switch text-truncate">
                             <input class="form-check-input" type="checkbox" id="dynamicPCheckbox" >
                             <label class="form-check-label" for="dynamicPCheckbox">
                               <div class="row">
@@ -264,17 +238,17 @@
                         <h5 class="mb-1">Difficulty</h5>
 
                         <div class="row ms-1">
-                          <div class="col-12 col-lg-6 form-check form-switch">
+                          <div class="col-6 form-check form-switch">
                             <input class="form-check-input" type="checkbox" id="easyCheckbox" checked>
                             <label class="form-check-label" for="easyCheckbox">Easy</label>
                           </div>
       
-                          <div class="col-12 col-lg-6 form-check form-switch">
+                          <div class="col-6 form-check form-switch">
                             <input class="form-check-input" type="checkbox" id="mediumCheckbox" checked>
                             <label class="form-check-label" for="mediumCheckbox">Medium</label>
                           </div>
       
-                          <div class="col-12 col-lg-6 form-check form-switch ">
+                          <div class="col-6 form-check form-switch ">
                             <input class="form-check-input" type="checkbox" id="hardCheckbox" checked>
                             <label class="form-check-label" for="hardCheckbox">Hard</label>
                           </div>
@@ -284,8 +258,7 @@
                     </div>
 
                 </div>
-        
-            </div>
+          </div>
         </section>
 
         <hr>
@@ -308,5 +281,9 @@
 
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../fontawesome/js/all.min.js"></script>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/jquery.dataTables.min.js"></script>
+    <script src="../js/dataTables.bootstrap5.min.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

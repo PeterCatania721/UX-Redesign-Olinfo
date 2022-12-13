@@ -55,6 +55,18 @@
     color: red !important;
  }
 
+ .easy-background {
+    background-color: rgb(38, 154, 38) !important;
+}
+
+.medium-background {
+   background-color: orange !important;
+}
+
+.hard-background {
+   background-color: red !important;
+}
+
  .w-70 {
     width: 70% !important;
  }

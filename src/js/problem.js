@@ -1,0 +1,1 @@
+var oTable = $('#previos-submissions').DataTable();

@@ -55,3 +55,16 @@
  .w-70 {
     width: 70% !important;
  }
+
+ .btn-editor-action {
+    min-width: fit-content;
+    width: fit-content;
+ }
+
+.CodeMirror-wrap {
+    border: 1px solid #ccc;
+}
+
+.CodeMirror-linenumbers {
+   background-color: #d8e5f4;
+}

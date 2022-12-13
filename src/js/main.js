@@ -20,4 +20,4 @@ $(window).on('load', function() {
 
 $( window ).resize(function() {
     $('.card-body').vAlign();
-  });
+});

@@ -11,273 +11,390 @@
     <link rel="stylesheet" href="../fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../flagicon/css/flag-icons.min.css">
     <link rel="stylesheet" href="../css/main.css">
-    <title>Homepage</title>
+    <title>Problems</title>
 </head>
 <body class="bg-light">
-    <!--NAVBAR-->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img src="../img/logo.png" alt="cat" height="32"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav ms-auto">
-                <div class="nav-item py-1 col-12 col-lg-auto">
-                    <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
-                    <hr class="d-lg-none text-white-50">
-                </div>
-                <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a>
-                <a class="nav-link" href="#"><i class="fa-solid fa-clipboard-question"></i> Problems</a>
-                <a class="nav-link" href="#"><i class="fa-solid fa-ranking-star"></i> Ranking</a>
-                <a class="nav-link" href="#"><i class="fa-solid fa-comments"></i> Forum</a>
+    <div id="loader"></div>
+    <div class="content-body">
+      <!--NAVBAR-->
+      <header>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html"><img src="../img/logo.png" alt="cat" height="32"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                  <div class="nav-item py-1 col-12 col-lg-auto">
+                      <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+                      <hr class="d-lg-none text-white-50">
+                  </div>
+                  <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a>
+                  <a class="nav-link" href="#"><i class="fa-solid fa-clipboard-question"></i> Problems</a>
+                  <a class="nav-link" href="#"><i class="fa-solid fa-ranking-star"></i> Ranking</a>
+                  <a class="nav-link" href="#"><i class="fa-solid fa-comments"></i> Forum</a>
 
-                <div class="nav-item py-1 col-12 col-lg-auto">
-                    <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
-                    <hr class="d-lg-none text-white-50">
-                </div>
+                  <div class="nav-item py-1 col-12 col-lg-auto">
+                      <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+                      <hr class="d-lg-none text-white-50">
+                  </div>
 
-                <form class="d-flex" role="search">
-                    <button class="btn btn-outline-success me-2" type="button">Register</button>
-                    <button class="btn btn-success" type="button">Login</button>
-                </form>
+                  <form class="d-flex" role="search">
+                      <button class="btn btn-outline-success me-2" type="button">Register</button>
+                      <button class="btn btn-success" type="button">Login</button>
+                  </form>
 
-                <div class="nav-item py-1 col-12 col-lg-auto">
-                    <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
-                    <hr class="d-lg-none text-white-50">
-                </div>
+                  <div class="nav-item py-1 col-12 col-lg-auto">
+                      <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+                      <hr class="d-lg-none text-white-50">
+                  </div>
 
-                <div class="navbar-collapse" id="navbarNavDarkDropdown">
-                    <ul class="navbar-nav">
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa fa-language" aria-hidden="true"></i> Language
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li>
-                                <a class="dropdown-item" href="#"><span class="fi fi-gb"></span> English</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#"><span class="fi fi-it"></span> Italiano</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#"><span class="fi fi-de"></span> Deutsch</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#"><span class="fi fi-fr"></span> Français</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#"><span class="fi fi-es"></span> Español</a>
-                            </li>
-                        </ul>
-                      </li>
-                    </ul>
-                </div>
-                <div class="nav-item py-1 col-12 col-lg-auto">
-                    <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
-                    <hr class="d-lg-none text-white-50">
-                </div>
-            </div>
-          </div>
-        </nav>
-      </header>
-
-    <!--MAIN-->
-    <main>
-        <section class="container mt-5">
-
-            <div class="row">
-                <div class="col-12 col-lg-7 pe-3">
-                  <h2>Problems</h2>
-      
-                  <div class="dataTables_wrapper dt-bootstrap5">
-                    <div class="row dt-row">
-                      <table id="problems-table" class="table dataTable table-striped mb-4 mt-3 table-responsive shadow-sm">
-                        <thead class="table-dark">
-                          <tr>
-                            <th class="sorting" tabindex="0" scope="col">Title</th>
-                            <th class="sorting" tabindex="1" scope="col">Type</th>
-                            <th class="sorting" tabindex="2" scope="col">Difficulty</th>
-                          </tr>
-                        </thead>
-                      <tbody>
-                        <tr>
-                          <td>Title #1</td>
-                          <td><span class="badge rounded-pill bg-secondary"> Sorting </span></td>
-                          <td class="medium-color">Medium</td>
-                        </tr>
-                        <tr>
-                          <td>Title #2</td>
-                          <td><span class="badge rounded-pill bg-secondary"> Binary Search </span></td>
-                          <td class="easy-color">Easy</td>
-                        </tr>
-                        <tr>
-                          <td>Title #3</td>
-                          <td><span class="badge rounded-pill bg-secondary"> Tree </span></td>
-                          <td class="medium-color">Medium</td>
-                        </tr>
-                        <tr>
-                          <td>Title #4</td>
-                          <td><span class="badge rounded-pill bg-secondary"> Tree </span></td>
-                          <td class="hard-color">Hard</td>
-                        </tr>
-                        <tr>
-                          <td>Title #5</td>
-                          <td><span class="badge rounded-pill bg-secondary"> Sorting </span></td>
-                          <td class="easy-color">Easy</td>
-                        </tr>
-                        <tr>
-                          <td>Title #6</td>
-                          <td><span class="badge rounded-pill bg-secondary"> Greedy </span></td>
-                          <td class="medium-color">Medium</td>
-                        </tr>
-                        <tr>
-                          <td>Title #7</td>
-                          <td><span class="badge rounded-pill bg-secondary"> Tree </span></td>
-                          <td class="easy-color">Easy</td>
-                        </tr>
-                        <tr>
-                          <td>Title #8</td>
-                          <td><span class="badge rounded-pill bg-secondary"> Greedy </span></td>
-                          <td class="medium-color">Medium</td>
-                        </tr>
-                        <tr>
-                          <td>Title #9</td>
-                          <td><span class="badge rounded-pill bg-secondary"> Binary Search </span></td>
-                          <td class="hard-color">Hard</td>
-                        </tr>
-                        <tr>
-                          <td>Title #10</td>
-                          <td><span class="badge rounded-pill bg-secondary"> Sorting </span></td>
-                          <td class="easy-color">Easy</td>
-                        </tr>
-            
-            
-                      </tbody>
-                    
-                      </table>
-                    </div>
+                  <div class="navbar-collapse" id="navbarNavDarkDropdown">
+                      <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              <i class="fa fa-language" aria-hidden="true"></i> Language
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                              <li>
+                                  <a class="dropdown-item" href="#"><span class="fi fi-gb"></span> English</a>
+                              </li>
+                              <li>
+                                  <a class="dropdown-item" href="#"><span class="fi fi-it"></span> Italiano</a>
+                              </li>
+                              <li>
+                                  <a class="dropdown-item" href="#"><span class="fi fi-de"></span> Deutsch</a>
+                              </li>
+                              <li>
+                                  <a class="dropdown-item" href="#"><span class="fi fi-fr"></span> Français</a>
+                              </li>
+                              <li>
+                                  <a class="dropdown-item" href="#"><span class="fi fi-es"></span> Español</a>
+                              </li>
+                          </ul>
+                        </li>
+                      </ul>
+                  </div>
+                  <div class="nav-item py-1 col-12 col-lg-auto">
+                      <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+                      <hr class="d-lg-none text-white-50">
                   </div>
               </div>
+            </div>
+          </nav>
+        </header>
 
-                <div class="nav-item py-1 col-12 col-lg-auto">
-                  <div class="vr d-none d-lg-flex h-100 mx-lg-2"></div>
-                  <hr class="d-lg-none text-50">
-                </div>
+      <!--MAIN-->
+      <main>
+          <section class="container mt-5">
 
-                <div class="col-12 col-lg-4 ps-3">
-                  <h2>Filters</h2>
-                  
-                    <div class="row mt-2 w-auto">
-                      <div class="col">
-                        <h5 class="mb-1">Type</h5>
-
-                        <div class="row ms-1">
-
-                          <div class="col-6 form-check form-switch">
-                            <input class="form-check-input" type="checkbox" id="sortingCheckbox" checked>
-                            <label class="form-check-label" for="sortingCheckbox">Sorting</label>
-                          </div>
-
-                          <div class="col-6 form-check form-switch">
-                            <input class="form-check-input" type="checkbox" id="hashtableCheckbox" >
-                            <label class="form-check-label" for="hashtableCheckbox">
-                              <div class="row">
-                                <div class="col-8 col-lg-8 col-xxl-12 text-truncate w-auto">
-                                  Hash Table
-                                </div>
-                              </div>
-                            </label>
-                          </div>
-
-                          <div class="col-6 form-check form-switch">
-                            <input class="form-check-input" type="checkbox" id="binarySearchCheckbox" checked>
-                            <label class="form-check-label" for="binarySearchCheckbox">
-                              <div class="row">
-                                <div class="col-11 col-sm-12 text-truncate">
-                                  Binary Search
-                                </div>
-                              </div>
-                            </label>
-                          </div>
-
-                          <div class="col-6 form-check form-switch">
-                            <input class="form-check-input" type="checkbox" id="treeCheckbox" checked>
-                            <label class="form-check-label" for="treeCheckbox">
-                              <div class="row">
-                                <div class="col-8 col-lg-8 col-xxl-12 text-truncate w-auto">
-                                  Tree
-                                </div>
-                              </div>
-                            </label>
-                          </div>
-
-                          <div class="col-6 form-check form-switch text-truncate">
-                            <input class="form-check-input" type="checkbox" id="dynamicPCheckbox" >
-                            <label class="form-check-label" for="dynamicPCheckbox">
-                              <div class="row">
-                                <div class="col-8 col-sm-8 col-lg-8 col-xxl-12 text-truncate">
-                                  Dynamic programming
-                                </div>
-                              </div>
-                            </label>
-                          </div>
-
-                          <div class="col-6 form-check form-switch">
-                            <input class="form-check-input" type="checkbox" id="greedyCheckbox" checked>
-                            <label class="form-check-label w-auto" for="greedyCheckbox">Greedy</label>
-                          </div>
-                        </div>
-
+              <h2 class="mb-4">Problems</h2>
+              <div class="row">
+                  <div id="tableData" class="col-12 col-lg-7 order-last">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+                      <input id="search" type="text" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="dataTables_wrapper dt-bootstrap5">
+                      <div class="row dt-row">
+                        <table id="problems-table" class="table dataTable table-striped mb-4 mt-3 table-responsive shadow-sm">
+                          <thead class="table-dark">
+                            <tr>
+                              <th class="sorting" tabindex="0" scope="col">Title</th>
+                              <th class="sorting" tabindex="1" scope="col">Type</th>
+                              <th class="sorting" tabindex="2" scope="col">Difficulty</th>
+                            </tr>
+                          </thead>
+                        <tbody>
+                          <tr>
+                            <td>Title #01</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Sorting </span></td>
+                            <td class="medium-color">Medium</td>
+                          </tr>
+                          <tr>
+                            <td>Title #02</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Binary Search </span></td>
+                            <td class="easy-color">Easy</td>
+                          </tr>
+                          <tr>
+                            <td>Title #03</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Tree </span></td>
+                            <td class="medium-color">Medium</td>
+                          </tr>
+                          <tr>
+                            <td>Title #04</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Tree </span></td>
+                            <td class="hard-color">Hard</td>
+                          </tr>
+                          <tr>
+                            <td>Title #05</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Sorting </span></td>
+                            <td class="easy-color">Easy</td>
+                          </tr>
+                          <tr>
+                            <td>Title #06</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Greedy </span></td>
+                            <td class="medium-color">Medium</td>
+                          </tr>
+                          <tr>
+                            <td>Title #07</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Tree </span></td>
+                            <td class="easy-color">Easy</td>
+                          </tr>
+                          <tr>
+                            <td>Title #08</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Greedy </span></td>
+                            <td class="medium-color">Medium</td>
+                          </tr>
+                          <tr>
+                            <td>Title #09</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Binary Search </span></td>
+                            <td class="hard-color">Hard</td>
+                          </tr>
+                          <tr>
+                            <td>Title #10</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Sorting </span></td>
+                            <td class="easy-color">Easy</td>
+                          </tr>
+                          <tr>
+                            <td>Title #11</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Sorting </span></td>
+                            <td class="medium-color">Medium</td>
+                          </tr>
+                          <tr>
+                            <td>Title #12</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Tree </span></td>
+                            <td class="medium-color">Medium</td>
+                          </tr>
+                          <tr>
+                            <td>Title #13</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Sorting </span></td>
+                            <td class="medium-color">Medium</td>
+                          </tr>
+                          <tr>
+                            <td>Title #14</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Binary Search </span></td>
+                            <td class="easy-color">Easy</td>
+                          </tr>
+                          <tr>
+                            <td>Title #15</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Sorting </span></td>
+                            <td class="easy-color">Easy</td>
+                          </tr>
+                          <tr>
+                            <td>Title #16</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Greedy </span></td>
+                            <td class="hard-color">Hard</td>
+                          </tr>
+                          <tr>
+                            <td>Title #17</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Binary Search </span></td>
+                            <td class="medium-color">Medium</td>
+                          </tr>
+                          <tr>
+                            <td>Title #18</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Binary Search </span></td>
+                            <td class="hard-color">Hard</td>
+                          </tr>
+                          <tr>
+                            <td>Title #19</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Sorting </span></td>
+                            <td class="easy-color">Easy</td>
+                          </tr>
+                          <tr>
+                            <td>Title #20</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Sorting </span></td>
+                            <td class="easy-color">Easy</td>
+                          </tr>
+                          <tr>
+                            <td>Title #21</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Sorting </span></td>
+                            <td class="hard-color">Hard</td>
+                          </tr>
+                          <tr>
+                            <td>Title #22</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Binary Search </span></td>
+                            <td class="hard-color">Hard</td>
+                          </tr>
+                          <tr>
+                            <td>Title #23</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Sorting </span></td>
+                            <td class="medium-color">Medium</td>
+                          </tr>
+                          <tr>
+                            <td>Title #24</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Binary Search </span></td>
+                            <td class="hard-color">Hard</td>
+                          </tr>
+                          <tr>
+                            <td>Title #25</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Sorting </span></td>
+                            <td class="medium-color">Medium</td>
+                          </tr>
+                          <tr>
+                            <td>Title #26</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Greedy </span></td>
+                            <td class="hard-color">Hard</td>
+                          </tr>
+                          <tr>
+                            <td>Title #27</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Sorting </span></td>
+                            <td class="hard-color">Hard</td>
+                          </tr>
+                          <tr>
+                            <td>Title #28</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Binary Search </span></td>
+                            <td class="easy-color">Easy</td>
+                          </tr>
+                          <tr>
+                            <td>Title #29</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Tree </span></td>
+                            <td class="medium-color">Medium</td>
+                          </tr>
+                          <tr>
+                            <td>Title #30</td>
+                            <td><span class="badge rounded-pill bg-secondary"> Tree </span></td>
+                            <td class="medium-color">Medium</td>
+                          </tr>
+              
+              
+                        </tbody>
+                      
+                        </table>
                       </div>
                     </div>
-
-                    <div class="row mt-2">
-                      <div class="col">
-                        <h5 class="mb-1">Difficulty</h5>
-
-                        <div class="row ms-1">
-                          <div class="col-6 form-check form-switch">
-                            <input class="form-check-input" type="checkbox" id="easyCheckbox" checked>
-                            <label class="form-check-label" for="easyCheckbox">Easy</label>
-                          </div>
-      
-                          <div class="col-6 form-check form-switch">
-                            <input class="form-check-input" type="checkbox" id="mediumCheckbox" checked>
-                            <label class="form-check-label" for="mediumCheckbox">Medium</label>
-                          </div>
-      
-                          <div class="col-6 form-check form-switch ">
-                            <input class="form-check-input" type="checkbox" id="hardCheckbox" checked>
-                            <label class="form-check-label" for="hardCheckbox">Hard</label>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
-
                 </div>
-          </div>
-        </section>
 
-        <hr>
+                  <div class="nav-item py-1 col-12 col-lg-auto">
+                    <div class="vr d-none d-lg-flex h-100 mx-lg-2"></div>
+                    <hr class="d-lg-none text-50">
+                  </div>
 
-        <!--FOOTER-->
-        <footer class="container text-center mb-5">
-          <div class="row">
-              <div class="col-4 mt-5">
-                  <img src="../img/aica.png" alt="logo algobadge" width="100%">
-              </div>
-              <div class="col-4 mt-5">
-                  <img src="../img/logo_fo.png" alt="logo algobadge" width="100%">
-              </div>
-              <div class="col-4 mt-5">
-                  <img src="../img/miur.jpeg" alt="logo algobadge" width="100%">
-              </div>
-          </div>
-        </footer>
-    </main>
+                  <div id="filterData" class="col-12 col-lg order-first">
+                      <div class="row w-auto">
+                        <div class="col">
+                          <div class="accordion">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingOne">
+                                <button id="btn-filters" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                  <h5 id="title-filters">Filters</h5>
+                                </button>
+                              </h2>
+                              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                  <div class="row mt-2">
+                                    <div class="col">
+                                      <h5 class="mb-2">Difficulty</h5>
+                                      <div class="row ms-1 mb-4">
+                                        
+                                        <div class="col-6 form-check form-switch">
+                                          <input class="form-check-input" type="checkbox" id="easyCheckbox" checked>
+                                          <label class="form-check-label" for="easyCheckbox">Easy</label>
+                                        </div>
+                    
+                                        <div class="col-6 form-check form-switch">
+                                          <input class="form-check-input" type="checkbox" id="mediumCheckbox" checked>
+                                          <label class="form-check-label" for="mediumCheckbox">Medium</label>
+                                        </div>
+                    
+                                        <div class="col-6 form-check form-switch ">
+                                          <input class="form-check-input" type="checkbox" id="hardCheckbox" checked>
+                                          <label class="form-check-label" for="hardCheckbox">Hard</label>
+                                        </div>
+                                      </div>
+
+                                      <h5 class="mb-2">Type</h5>
+                                      <div class="row ms-1">
+
+                                        <div class="col-6 form-check form-switch">
+                                          <input class="form-check-input" type="checkbox" id="sortingCheckbox" checked>
+                                          <label class="form-check-label" for="sortingCheckbox">Sorting</label>
+                                        </div>
+
+                                        <div class="col-6 form-check form-switch">
+                                          <input class="form-check-input" type="checkbox" id="hashtableCheckbox" >
+                                          <label class="form-check-label" for="hashtableCheckbox">
+                                            <div class="row">
+                                              <div class="col-8 col-lg-8 col-xxl-12 text-truncate w-auto">
+                                                Hash Table
+                                              </div>
+                                            </div>
+                                          </label>
+                                        </div>
+
+                                        <div class="col-6 form-check form-switch">
+                                          <input class="form-check-input" type="checkbox" id="binarySearchCheckbox" checked>
+                                          <label class="form-check-label" for="binarySearchCheckbox">
+                                            <div class="row">
+                                              <div class="col-11 col-sm-12 text-truncate">
+                                                Binary Search
+                                              </div>
+                                            </div>
+                                          </label>
+                                        </div>
+
+                                        <div class="col-6 form-check form-switch">
+                                          <input class="form-check-input" type="checkbox" id="treeCheckbox" checked>
+                                          <label class="form-check-label" for="treeCheckbox">
+                                            <div class="row">
+                                              <div class="col-8 col-lg-8 col-xxl-12 text-truncate w-auto">
+                                                Tree
+                                              </div>
+                                            </div>
+                                          </label>
+                                        </div>
+
+                                        <div class="col-6 form-check form-switch text-truncate">
+                                          <input class="form-check-input" type="checkbox" id="dynamicPCheckbox" >
+                                          <label class="form-check-label" for="dynamicPCheckbox">
+                                            <div class="row">
+                                              <div class="col-8 col-sm-8 col-lg-8 col-xxl-12 text-truncate">
+                                                Dynamic programming
+                                              </div>
+                                            </div>
+                                          </label>
+                                        </div>
+
+                                        <div class="col-6 form-check form-switch">
+                                          <input class="form-check-input" type="checkbox" id="greedyCheckbox" checked>
+                                          <label class="form-check-label w-auto" for="greedyCheckbox">Greedy</label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+
+                      
+
+                  </div>
+            </div>
+          </section>
+
+          <hr>
+
+          <!--FOOTER-->
+          <footer class="container text-center mb-5">
+            <div class="row">
+                <div class="col-4 mt-5">
+                    <img src="../img/aica.png" alt="logo algobadge" width="100%">
+                </div>
+                <div class="col-4 mt-5">
+                    <img src="../img/logo_fo.png" alt="logo algobadge" width="100%">
+                </div>
+                <div class="col-4 mt-5">
+                    <img src="../img/miur.jpeg" alt="logo algobadge" width="100%">
+                </div>
+            </div>
+          </footer>
+      </main>
+    </div>
 
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../fontawesome/js/all.min.js"></script>

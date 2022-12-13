@@ -13,189 +13,191 @@
     <title>Homepage</title>
 </head>
 <body>
-    <!--NAVBAR-->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img src="../img/logo.png" alt="cat" height="32"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav ms-auto">
-                <div class="nav-item py-1 col-12 col-lg-auto">
-                    <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
-                    <hr class="d-lg-none text-white-50">
-                </div>
-                <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a>
-                <a class="nav-link" href="problems.html"><i class="fa-solid fa-clipboard-question"></i> Problems</a>
-                <a class="nav-link" href="#"><i class="fa-solid fa-ranking-star"></i> Ranking</a>
-                <a class="nav-link" href="#"><i class="fa-solid fa-comments"></i> Forum</a>
-                <div class="nav-item py-1 col-12 col-lg-auto">
-                    <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
-                    <hr class="d-lg-none text-white-50">
-                </div>
-                <form class="d-flex" role="search">
-                    <button class="btn btn-outline-success me-2" type="button">Register</button>
-                    <button class="btn btn-success" type="button">Login</button>
-                </form>
-                <div class="nav-item py-1 col-12 col-lg-auto">
-                    <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
-                    <hr class="d-lg-none text-white-50">
-                </div>
-                <div class="navbar-collapse" id="navbarNavDarkDropdown">
-                    <ul class="navbar-nav">
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa fa-language" aria-hidden="true"></i> Language
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li>
-                                <a class="dropdown-item" href="#"><span class="fi fi-gb"></span> English</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#"><span class="fi fi-it"></span> Italiano</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#"><span class="fi fi-de"></span> Deutsch</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#"><span class="fi fi-fr"></span> Français</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#"><span class="fi fi-es"></span> Español</a>
-                            </li>
-                        </ul>
-                      </li>
-                    </ul>
-                </div>
-                <div class="nav-item py-1 col-12 col-lg-auto">
-                    <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
-                    <hr class="d-lg-none text-white-50">
-                </div>
+    <div id="loader"></div>
+    <div class="content-body">
+      <!--NAVBAR-->
+      <header>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html"><img src="../img/logo.png" alt="cat" height="32"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                  <div class="nav-item py-1 col-12 col-lg-auto">
+                      <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+                      <hr class="d-lg-none text-white-50">
+                  </div>
+                  <a class="nav-link" href="#"><i class="fas fa-home"></i> Home</a>
+                  <a class="nav-link" href="problems.html"><i class="fa-solid fa-clipboard-question"></i> Problems</a>
+                  <a class="nav-link" href="#"><i class="fa-solid fa-ranking-star"></i> Ranking</a>
+                  <a class="nav-link" href="#"><i class="fa-solid fa-comments"></i> Forum</a>
+                  <div class="nav-item py-1 col-12 col-lg-auto">
+                      <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+                      <hr class="d-lg-none text-white-50">
+                  </div>
+                  <form class="d-flex" role="search">
+                      <button class="btn btn-outline-success me-2" type="button">Register</button>
+                      <button class="btn btn-success" type="button">Login</button>
+                  </form>
+                  <div class="nav-item py-1 col-12 col-lg-auto">
+                      <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+                      <hr class="d-lg-none text-white-50">
+                  </div>
+                  <div class="navbar-collapse" id="navbarNavDarkDropdown">
+                      <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              <i class="fa fa-language" aria-hidden="true"></i> Language
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                              <li>
+                                  <a class="dropdown-item" href="#"><span class="fi fi-gb"></span> English</a>
+                              </li>
+                              <li>
+                                  <a class="dropdown-item" href="#"><span class="fi fi-it"></span> Italiano</a>
+                              </li>
+                              <li>
+                                  <a class="dropdown-item" href="#"><span class="fi fi-de"></span> Deutsch</a>
+                              </li>
+                              <li>
+                                  <a class="dropdown-item" href="#"><span class="fi fi-fr"></span> Français</a>
+                              </li>
+                              <li>
+                                  <a class="dropdown-item" href="#"><span class="fi fi-es"></span> Español</a>
+                              </li>
+                          </ul>
+                        </li>
+                      </ul>
+                  </div>
+                  <div class="nav-item py-1 col-12 col-lg-auto">
+                      <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+                      <hr class="d-lg-none text-white-50">
+                  </div>
+              </div>
             </div>
+          </nav>
+        </header>
+      <!--MAIN-->
+      <main>
+          <div id="main">
+              <section class="text-center container">
+                  <h1 class="mt-5">Italian Olympiads in Informatics training website</h1>
+                  <p class="mt-4" id="initial-text">Welcome to the official training website for OII! Here you will be able to try and solve programming tasks by coding a solution in a programming language of your choice.</p>
+                  <p class="mt-5 display-6">
+                    <a href="#first-card" id="angle-link"><i class="fa fa-angle-down"></i></a>
+                  </p>
+              </section>
           </div>
-        </nav>
-      </header>
-    <!--MAIN-->
-    <main>
-        <div id="main">
-            <section class="text-center container">
-                <h1 class="mt-5">Italian Olympiads in Informatics training website</h1>
-                <p class="mt-4" id="initial-text">Welcome to the official training website for OII! Here you will be able to try and solve programming tasks by coding a solution in a programming language of your choice.</p>
-                <p class="mt-5 display-6">
-                  <a href="#first-card" id="angle-link"><i class="fa fa-angle-down"></i></a>
-                </p>
-            </section>
-        </div>
-        <span id="first-card"></span>
-        <section class="container mt-5">
-            <div class="row">
-                <div class="card mb-3">
-                    <div class="row g-0">
-                      <div class="col-md-5 col-lg-3">
-                        <img src="../img/learn.png" class="img-fluid rounded-start" alt="image learn" id="img1">
-                      </div>
-                      <div class="col-md-7 col-lg-9">
-                        <div class="card-body">
-                          <h4 class="card-title"><i class="fa fa-road"></i> Learn progressively</h4>
-                          <p class="card-text">With algobadge you will be guided through a curated selection of tasks to solve, ordered by increasing difficulty, while being able to explore new algorithmic techniques in a gradual and effective way.</p>
-                          <button type="button" class="btn btn-primary btn-sm">Algobadge <i class="fas fa-angle-double-right"></i></button>
+          <span id="first-card"></span>
+          <section class="container mt-5">
+              <div class="row">
+                  <div class="card mb-3">
+                      <div class="row g-0">
+                        <div class="col-md-5 col-lg-3">
+                          <img src="../img/learn.png" class="img-fluid rounded-start" alt="image learn" id="img1">
+                        </div>
+                        <div class="col-md-7 col-lg-9">
+                          <div class="card-body">
+                            <h4 class="card-title"><i class="fa fa-road"></i> Learn progressively</h4>
+                            <p class="card-text">With algobadge you will be guided through a curated selection of tasks to solve, ordered by increasing difficulty, while being able to explore new algorithmic techniques in a gradual and effective way.</p>
+                            <button type="button" class="btn btn-primary btn-sm">Algobadge <i class="fas fa-angle-double-right"></i></button>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="card mb-3 mt-3">
-                    <div class="row g-0">
-                      <div class="col-md-5 col-lg-3">
-                        <img src="../img/challenge.png" class="img-fluid" alt="image learn" id="img2">
-                      </div>
-                      <div class="col-md-7 col-lg-9">
-                        <div class="card-body">
-                          <h4 class="card-title"><i class="fa-solid fa-star-half-stroke"></i> Challenge yourself</h4>
-                          <p class="card-text">Challenge yourself by solving problems that appeared at the regional stage of the Italian Olympiads in Informatics. This is a good way to test your knowledge!</p>
-                          <button type="button" class="btn btn-primary btn-sm">Tasks from regionals <i class="fas fa-angle-double-right"></i></button>
+                  </div>
+              </div>
+              <hr>
+              <div class="row">
+                  <div class="card mb-3 mt-3">
+                      <div class="row g-0">
+                        <div class="col-md-5 col-lg-3">
+                          <img src="../img/challenge.png" class="img-fluid" alt="image learn" id="img2">
+                        </div>
+                        <div class="col-md-7 col-lg-9">
+                          <div class="card-body">
+                            <h4 class="card-title"><i class="fa-solid fa-star-half-stroke"></i> Challenge yourself</h4>
+                            <p class="card-text">Challenge yourself by solving problems that appeared at the regional stage of the Italian Olympiads in Informatics. This is a good way to test your knowledge!</p>
+                            <button type="button" class="btn btn-primary btn-sm">Tasks from regionals <i class="fas fa-angle-double-right"></i></button>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="card mb-3 mt-3">
-                    <div class="row g-0">
-                      <div class="col-md-5 col-lg-3">
-                        <img src="../img/solve.jpeg" class="img-fluid rounded-start" alt="image learn" id="img3">
-                      </div>
-                      <div class="col-md-7 col-lg-9">
-                        <div class="card-body">
-                          <h4 class="card-title"><i class="fa fa-battery-full"></i> Solve more problems</h4>
-                          <p class="card-text">The wide range of tasks available on this website will allow you to start from the easiest going to the toughest one: in this way you'll improve your programming abilities and your attitude to analyze and deal with hard computational problems!</p>
-                          <button type="button" class="btn btn-primary btn-sm">Tasks archieve <i class="fas fa-angle-double-right"></i></button>
+                  </div>
+              </div>
+              <hr>
+              <div class="row">
+                  <div class="card mb-3 mt-3">
+                      <div class="row g-0">
+                        <div class="col-md-5 col-lg-3">
+                          <img src="../img/solve.jpeg" class="img-fluid rounded-start" alt="image learn" id="img3">
+                        </div>
+                        <div class="col-md-7 col-lg-9">
+                          <div class="card-body">
+                            <h4 class="card-title"><i class="fa fa-battery-full"></i> Solve more problems</h4>
+                            <p class="card-text">The wide range of tasks available on this website will allow you to start from the easiest going to the toughest one: in this way you'll improve your programming abilities and your attitude to analyze and deal with hard computational problems!</p>
+                            <button type="button" class="btn btn-primary btn-sm">Tasks archieve <i class="fas fa-angle-double-right"></i></button>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="card mb-3 mt-3">
-                    <div class="row g-0">
-                      <div class="col-md-5 col-lg-3">
-                        <img src="../img/forum.jpeg" class="img-fluid rounded-start" alt="image learn" id="img4">
-                      </div>
-                      <div class="col-md-7 col-lg-9">
-                        <div class="card-body">
-                          <h4 class="card-title"><i class="fa fa-comments"></i> Get to know others</h4>
-                          <p class="card-text">Introduce yourself to other students, discuss the tasks, clear up your doubts on: basic constructs of you programming language, algorithms and data structures, libraries, algorithm techniques, and much more!</p>
-                          <button type="button" class="btn btn-primary btn-sm">Go to the forum <i class="fas fa-angle-double-right"></i></button>
+                  </div>
+              </div>
+              <hr>
+              <div class="row">
+                  <div class="card mb-3 mt-3">
+                      <div class="row g-0">
+                        <div class="col-md-5 col-lg-3">
+                          <img src="../img/forum.jpeg" class="img-fluid rounded-start" alt="image learn" id="img4">
+                        </div>
+                        <div class="col-md-7 col-lg-9">
+                          <div class="card-body">
+                            <h4 class="card-title"><i class="fa fa-comments"></i> Get to know others</h4>
+                            <p class="card-text">Introduce yourself to other students, discuss the tasks, clear up your doubts on: basic constructs of you programming language, algorithms and data structures, libraries, algorithm techniques, and much more!</p>
+                            <button type="button" class="btn btn-primary btn-sm">Go to the forum <i class="fas fa-angle-double-right"></i></button>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="card mb-3 mt-3">
-                    <div class="row g-0">
-                      <div class="col-md-5 col-lg-3">
-                        <img src="../img/wiki.jpeg" class="img-fluid rounded-start" alt="image learn" id="img5">
-                      </div>
-                      <div class="col-md-7 col-lg-9">
-                        <div class="card-body">
-                          <h4 class="card-title"><i class="fa-brands fa-wikipedia-w"></i> Browse the wiki</h4>
-                          <p class="card-text">In the official wiki you will find detailed explanations and solutions of past problems, as well as thorough writeups of algorithmic techniques.</p>
-                          <button type="button" class="btn btn-primary btn-sm">Browse the wiki <i class="fas fa-angle-double-right"></i></button>
+                  </div>
+              </div>
+              <hr>
+              <div class="row">
+                  <div class="card mb-3 mt-3">
+                      <div class="row g-0">
+                        <div class="col-md-5 col-lg-3">
+                          <img src="../img/wiki.jpeg" class="img-fluid rounded-start" alt="image learn" id="img5">
+                        </div>
+                        <div class="col-md-7 col-lg-9">
+                          <div class="card-body">
+                            <h4 class="card-title"><i class="fa-brands fa-wikipedia-w"></i> Browse the wiki</h4>
+                            <p class="card-text">In the official wiki you will find detailed explanations and solutions of past problems, as well as thorough writeups of algorithmic techniques.</p>
+                            <button type="button" class="btn btn-primary btn-sm">Browse the wiki <i class="fas fa-angle-double-right"></i></button>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="card mb-3 mt-3">
-                    <div class="row g-0">
-                      <div class="col-md-5 col-lg-3">
-                        <img src="../img/stats.jpeg" class="img-fluid rounded-start" alt="image learn" id="img6">
-                      </div>
-                      <div class="col-md-7 col-lg-9">
-                        <div class="card-body">
-                          <h4 class="card-title"><i class="fa fa-trophy"></i> Read the stats</h4>
-                          <p class="card-text">In the stats portal you will find information about past editions, like the ranking of students that participated before you, as well as which of them went on to compete at the international level.</p>
-                          <button type="button" class="btn btn-primary btn-sm">Read the stats <i class="fas fa-angle-double-right"></i></button>                          
+                  </div>
+              </div>
+              <hr>
+              <div class="row">
+                  <div class="card mb-3 mt-3">
+                      <div class="row g-0">
+                        <div class="col-md-5 col-lg-3">
+                          <img src="../img/stats.jpeg" class="img-fluid rounded-start" alt="image learn" id="img6">
+                        </div>
+                        <div class="col-md-7 col-lg-9">
+                          <div class="card-body">
+                            <h4 class="card-title"><i class="fa fa-trophy"></i> Read the stats</h4>
+                            <p class="card-text">In the stats portal you will find information about past editions, like the ranking of students that participated before you, as well as which of them went on to compete at the international level.</p>
+                            <button type="button" class="btn btn-primary btn-sm">Read the stats <i class="fas fa-angle-double-right"></i></button>                          
+                          </div>
                         </div>
                       </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <hr>
-    </main>
-    <!--FOOTER-->
-    <footer class="container text-center mb-5">
+                  </div>
+              </div>
+          </section>
+          <hr>
+      </main>
+      <!--FOOTER-->
+      <footer class="container text-center mb-5">
       <div class="row">
           <div class="col-4 mt-5">
               <img src="../img/aica.png" alt="logo algobadge" width="100%">
@@ -207,9 +209,11 @@
               <img src="../img/miur.jpeg" alt="logo algobadge" width="100%">
           </div>
       </div>
-    </footer>
+      </footer>
+    </div>
     <script src="../js/jquery-3.6.1.min.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/jquery.dataTables.min.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../fontawesome/js/all.min.js"></script>
 </body>

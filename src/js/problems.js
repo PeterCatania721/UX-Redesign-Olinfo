@@ -5,11 +5,6 @@ var oTable = $('#problems-table').DataTable( {
         }
     } );
 
-
-$('#search').on( 'keyup', function(){
-      oTable.search($(this).val()).draw() ;
-});
-
 $(window).on('load', function() {
     $('.card-body').vAlign();
     $('.bottom').addClass('row');
@@ -39,3 +34,42 @@ $(window).resize(function() {
         $('#collapseOne').addClass('show');
     }
   });
+
+  // apply filters on the datatable
+  function applySearch() {
+    var typeFilters = [];
+    var difficultyFilters = [];
+
+    $("#type-filters").find("input[type=checkbox]").each(function() {
+        if ($(this).is(":checked")) {
+            typeFilters.push($(this).val());
+        }
+    });
+
+    $("#difficulty-filters").find("input[type=checkbox]").each(function() {
+        if ($(this).is(":checked")) {
+            difficultyFilters.push($(this).val());
+        }
+    });
+
+    oTable.search($('#search').val());
+    oTable.column(1).search(typeFilters.join("|"), true, false);
+    oTable.column(2).search(difficultyFilters.join("|"), true, false);
+    oTable.draw();
+  }
+
+  // reset filters on button click
+  $("#resetFiltersButton").click(function() {
+    $("#filters-container").find("input[type=checkbox]").each(function() {
+        $(this).prop("checked", false);
+    });
+
+    applySearch();
+  });
+
+// apply filters on checkbox click
+$("#filters-container").find("input[type=checkbox]").each(function() {
+    $(this).click(applySearch);
+});
+
+$('#search').on( 'keyup', applySearch);

@@ -284,36 +284,36 @@
                               <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                   <div class="row mt-2">
-                                    <div class="col">
+                                    <div id="filters-container" class="col">
                                       <h5 class="mb-2">Difficulty</h5>
-                                      <div class="row ms-1 mb-4">
+                                      <div id="difficulty-filters" class="row ms-1 mb-4">
                                         
                                         <div class="col-6 form-check form-switch">
-                                          <input class="form-check-input" type="checkbox" id="easyCheckbox" checked>
+                                          <input class="form-check-input" type="checkbox" id="easyCheckbox" value="Easy" >
                                           <label class="form-check-label" for="easyCheckbox">Easy</label>
                                         </div>
                     
                                         <div class="col-6 form-check form-switch">
-                                          <input class="form-check-input" type="checkbox" id="mediumCheckbox" checked>
+                                          <input class="form-check-input" type="checkbox" id="mediumCheckbox" value="Medium" >
                                           <label class="form-check-label" for="mediumCheckbox">Medium</label>
                                         </div>
                     
                                         <div class="col-6 form-check form-switch ">
-                                          <input class="form-check-input" type="checkbox" id="hardCheckbox" checked>
+                                          <input class="form-check-input" type="checkbox" id="hardCheckbox"  value="Hard">
                                           <label class="form-check-label" for="hardCheckbox">Hard</label>
                                         </div>
                                       </div>
 
                                       <h5 class="mb-2">Type</h5>
-                                      <div class="row ms-1">
+                                      <div id="type-filters" class="row ms-1">
 
                                         <div class="col-6 form-check form-switch">
-                                          <input class="form-check-input" type="checkbox" id="sortingCheckbox" checked>
+                                          <input class="form-check-input" type="checkbox" id="sortingCheckbox" value="Sorting" >
                                           <label class="form-check-label" for="sortingCheckbox">Sorting</label>
                                         </div>
 
                                         <div class="col-6 form-check form-switch">
-                                          <input class="form-check-input" type="checkbox" id="hashtableCheckbox" >
+                                          <input class="form-check-input" type="checkbox" id="hashtableCheckbox" value="Hash Table">
                                           <label class="form-check-label" for="hashtableCheckbox">
                                             <div class="row">
                                               <div class="col-8 col-lg-8 col-xxl-12 text-truncate w-auto">
@@ -324,7 +324,7 @@
                                         </div>
 
                                         <div class="col-6 form-check form-switch">
-                                          <input class="form-check-input" type="checkbox" id="binarySearchCheckbox" checked>
+                                          <input class="form-check-input" type="checkbox" id="binarySearchCheckbox" value="Binary Search" >
                                           <label class="form-check-label" for="binarySearchCheckbox">
                                             <div class="row">
                                               <div class="col-11 col-sm-12 text-truncate">
@@ -335,7 +335,7 @@
                                         </div>
 
                                         <div class="col-6 form-check form-switch">
-                                          <input class="form-check-input" type="checkbox" id="treeCheckbox" checked>
+                                          <input class="form-check-input" type="checkbox" id="treeCheckbox" value="Tree" >
                                           <label class="form-check-label" for="treeCheckbox">
                                             <div class="row">
                                               <div class="col-8 col-lg-8 col-xxl-12 text-truncate w-auto">
@@ -346,7 +346,7 @@
                                         </div>
 
                                         <div class="col-6 form-check form-switch text-truncate">
-                                          <input class="form-check-input" type="checkbox" id="dynamicPCheckbox" >
+                                          <input class="form-check-input" type="checkbox" id="dynamicPCheckbox" value="Dynamic programming">
                                           <label class="form-check-label" for="dynamicPCheckbox">
                                             <div class="row">
                                               <div class="col-8 col-sm-8 col-lg-8 col-xxl-12 text-truncate">
@@ -357,12 +357,23 @@
                                         </div>
 
                                         <div class="col-6 form-check form-switch">
-                                          <input class="form-check-input" type="checkbox" id="greedyCheckbox" checked>
+                                          <input class="form-check-input" type="checkbox" id="greedyCheckbox" value="Greedy" >
                                           <label class="form-check-label w-auto" for="greedyCheckbox">Greedy</label>
                                         </div>
+
                                       </div>
                                     </div>
+
+                                    <div class="col-12 mt-4">
+                                      <div class="d-flex">
+                                        <div>
+                                          <button id="resetFiltersButton" type="button" class="btn btn-danger btn-sm btn-editor-action">
+                                            <i class="fa-solid fa-trash"></i> Reset Filters
+                                          </button>
+                
+                                      </div>
                                   </div>
+                                  
                                 </div>
                               </div>
                             </div>

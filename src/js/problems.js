@@ -6,7 +6,6 @@ var oTable = $('#problems-table').DataTable( {
     } );
 
 $(window).on('load', function() {
-    $('.card-body').vAlign();
     $('.bottom').addClass('row');
     $('.bottom').children().addClass('col-md-6');
     $('#problems-table_filter').children().css('font-size', '20px');

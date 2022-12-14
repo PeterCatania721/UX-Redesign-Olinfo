@@ -22,7 +22,6 @@ $(window).on('load', function() {
 });
 
 $(window).resize(function() {
-    $('.card-body').vAlign();
     if ($(this).width() < 991.98) {
         $('#tableData').addClass('order-last');
         $('#filterData').addClass('order-first');

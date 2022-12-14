@@ -4,3 +4,5 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
     lineNumbers: true,
     lineWrapping: true
 });
+
+editor.getDoc().setValue('Write your code here!!\n\n\n\n\n\n\n\n\n\n\n\n\n\n');

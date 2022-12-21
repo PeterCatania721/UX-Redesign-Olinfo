@@ -6,4 +6,4 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
 });
 
 
-editor.getDoc().setValue('//Write your code here!!\n\n\n\n\n\n\n\n\n\n\n\n\n\n');
+editor.getDoc().setValue("//Write your code here!!\n\n\n\n\n\n\n\n\n\n\n\n\n\n");

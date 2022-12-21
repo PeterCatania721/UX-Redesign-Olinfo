@@ -12,5 +12,5 @@
 
 $(function () {
     $('#loader').hide();
-    $('.content-body').show();
+    $('.content-page').show();
  });

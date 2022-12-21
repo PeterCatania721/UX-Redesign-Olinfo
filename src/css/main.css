@@ -1,13 +1,13 @@
  /*==========*/
 /* Main Page */
  /*==========*/
- .content-body {
+ .content-page {
    display: none;
 }
 
-#main {
-    padding: 100px 0px;
-    background-color: #f5f5f5;
+#main-title {
+   padding: 100px 0px;
+   background-color: #f5f5f5;
 }
 
 #initial-text {
@@ -167,4 +167,8 @@
 
 .fa-circle-exclamation{
    color: red;
+}
+
+.tab-pane {
+   height: 650px;
 }

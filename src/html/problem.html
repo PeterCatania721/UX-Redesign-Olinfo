@@ -12,16 +12,25 @@
     <link rel="stylesheet" href="../flagicon/css/flag-icons.min.css">
 
     <!-- code editor-->
-    <script src="../js/codemirror.js"></script>
-    <link rel="stylesheet" href="../css/codemirror.css">
+    
+    <link rel="stylesheet" href="../codemirror/lib/codemirror.css">
+    <script src="../codemirror/lib/codemirror.js"></script>
+    <script src="../codemirror/addon/display/placeholder.js"></script>
+  
 
     <link rel="stylesheet" href="../css/main.css">
-    <title>Homepage</title>
+
+    <style>
+      .CodeMirror { border: 1px solid silver; }
+      .CodeMirror-empty.CodeMirror-focused { outline: none; }
+      .CodeMirror pre.CodeMirror-placeholder { color: #999; }
+    </style>
+    <title>Vending Machines</title>
 </head>
 <body class="bg-light">
     <!--NAVBAR-->
-  <div id="loader"></div>
-    <div class="content-body">
+    <div id="loader"></div>
+    <div class="content-page">
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <div class="container-fluid">
@@ -133,7 +142,7 @@
 
                 <div class="tab-content bg-white p-3 border border-top-0" id="myTabContent">
 
-                  <div class="tab-pane fade show active he" id="text" role="tabpanel" aria-labelledby="home-tab" style="height: 650px;">
+                  <div class="tab-pane fade show active he" id="text" role="tabpanel" aria-labelledby="home-tab">
                     <iframe src="../pdfs/problem.pdf" style="width: 100%;height: 100%; border: none;"></iframe>
                   </div>
 
@@ -211,6 +220,7 @@
                     <div id="tableData" class="col-12 order-last">
                       <div class="dataTables_wrapper dt-bootstrap5">
                         <div class="row dt-row">
+                          <h3 class="mb-4">Previous submissions</h3>
                           <table id="previos-submissions" class="table dataTable table-striped mb-4 mt-3 table-responsive">
                             <thead class="table-dark">
                               <tr>
@@ -251,8 +261,48 @@
                               <td class="easy-color fw-semibold">100%</td>
                               <td><a href="#">Download</a></td>
                             </tr>
-                          
-                
+                            <tr>
+                              <td>6</td>
+                              <td>08/12/2022</td>
+                              <td class="hard-color fw-semibold">0%</td>
+                              <td><a href="#">Download</a></td>
+                            </tr>
+                            <tr>
+                              <td>7</td>
+                              <td>09/12/2022</td>
+                              <td class="medium-color fw-semibold">50%</td>
+                              <td><a href="#">Download</a></td>
+                            </tr>
+                            <tr>
+                              <td>8</td>
+                              <td>09/12/2022</td>
+                              <td class="medium-color fw-semibold">50%</td>
+                              <td><a href="#">Download</a></td>
+                            </tr>
+                            <tr>
+                              <td>9</td>
+                              <td>10/12/2022</td>
+                              <td class="easy-color fw-semibold">100%</td>
+                              <td><a href="#">Download</a></td>
+                            </tr>
+                            <tr>
+                              <td>10</td>
+                              <td>11/12/2022</td>
+                              <td class="easy-color fw-semibold">100%</td>
+                              <td><a href="#">Download</a></td>
+                            </tr>
+                            <tr>
+                              <td>11</td>
+                              <td>10/12/2022</td>
+                              <td class="easy-color fw-semibold">100%</td>
+                              <td><a href="#">Download</a></td>
+                            </tr>
+                            <tr>
+                              <td>12</td>
+                              <td>11/12/2022</td>
+                              <td class="easy-color fw-semibold">100%</td>
+                              <td><a href="#">Download</a></td>
+                            </tr>
                           </tbody>
                         
                           </table>
@@ -333,7 +383,7 @@
 
               <div class="row mt-2">
                 <form>
-                  <textarea id="code" name="code" ></textarea>
+                  <textarea id="code" name="code" placeholder="Write code here..."></textarea>
                 </form>
               </div>
             </div>
@@ -366,9 +416,11 @@
     <script src="../js/dataTables.bootstrap5.min.js"></script>
 
     <!-- code editor-->
-    <script src="../js/javascript.js"></script>
-    <script src="../js/codeEditor.js"></script>
-    <script src="../js/placeholder.js"></script>
+    <script>
+      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        lineNumbers: true
+      });
+    </script>
 
     <script src="../js/main.js"></script>
     <script src="../js/problem.js"></script>

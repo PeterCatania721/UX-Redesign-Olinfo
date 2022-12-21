@@ -12,5 +12,5 @@
 
 $(function () {
     $('#loader').hide();
-    $('.content-page').show();
+    $(".content-page").css("visibility", "visible");
  });

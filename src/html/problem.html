@@ -95,14 +95,16 @@
       <main>
         <section class="container mt-5">
 
-          <h2 class="mb-4">Problem #</h2>
-          <nav class="mb-4 d-none" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+          <h2 class="mb-1">Vending Machines</h2>
+
+          <nav class="mb-4" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="index.html">Home</a></li>
               <li class="breadcrumb-item" aria-current="page"><a href="problems.html">Problems</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Problem #</li>
+              <li class="breadcrumb-item active" aria-current="page">Vending Machines</li>
             </ol>
           </nav>
+
           <div class="row">
             <div class="col-12 col-lg pe-3">
 
@@ -115,6 +117,9 @@
                   </li>
                   <li class="nav-item" role="presentation">
                     <button class="nav-link" id="statistics-tab" data-bs-toggle="tab" data-bs-target="#statistics" type="button" role="tab" aria-controls="statistics" aria-selected="false">Statistics</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="submissions-tab" data-bs-toggle="tab" data-bs-target="#submissions" type="button" role="tab" aria-controls="submissions" aria-selected="false">Submissions</button>
                   </li>
                 </ul>
 
@@ -193,6 +198,61 @@
                       </div>
                     </div>
                   </div>
+
+                  <div class="tab-pane fade" id="submissions" role="tabpanel" aria-labelledby="submissions-tab">
+                    <div id="tableData" class="col-12 order-last">
+                      <div class="dataTables_wrapper dt-bootstrap5">
+                        <div class="row dt-row">
+                          <table id="previos-submissions" class="table dataTable table-striped mb-4 mt-3 table-responsive">
+                            <thead class="table-dark">
+                              <tr>
+                                <th class="sorting" tabindex="0" scope="col">Id</th>
+                                <th class="sorting" tabindex="1" scope="col">Date</th>
+                                <th class="sorting" tabindex="2" scope="col">Correctness</th>
+                                <th class="sorting" tabindex="3" scope="col">File(s)</th>
+                              </tr>
+                            </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td>08/12/2022</td>
+                              <td class="hard-color fw-semibold">0%</td>
+                              <td><a href="#">Download</a></td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>09/12/2022</td>
+                              <td class="medium-color fw-semibold">50%</td>
+                              <td><a href="#">Download</a></td>
+                            </tr>
+                            <tr>
+                              <td>3</td>
+                              <td>09/12/2022</td>
+                              <td class="medium-color fw-semibold">50%</td>
+                              <td><a href="#">Download</a></td>
+                            </tr>
+                            <tr>
+                              <td>4</td>
+                              <td>10/12/2022</td>
+                              <td class="easy-color fw-semibold">100%</td>
+                              <td><a href="#">Download</a></td>
+                            </tr>
+                            <tr>
+                              <td>5</td>
+                              <td>11/12/2022</td>
+                              <td class="easy-color fw-semibold">100%</td>
+                              <td><a href="#">Download</a></td>
+                            </tr>
+                          
+                
+                          </tbody>
+                        
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
                 </div>
             </div>
 
@@ -246,66 +306,8 @@
                   <textarea id="code" name="code" ></textarea>
                 </form>
               </div>
-
-              <div class="row mt-4">
-                  <h2>Previous submissions</h2>
-
-                  <div id="tableData" class="col-12 order-last">
-                    <div class="dataTables_wrapper dt-bootstrap5">
-                      <div class="row dt-row">
-                        <table id="previos-submissions" class="table dataTable table-striped mb-4 mt-3 table-responsive">
-                          <thead class="table-dark">
-                            <tr>
-                              <th class="sorting" tabindex="0" scope="col">Id</th>
-                              <th class="sorting" tabindex="1" scope="col">Date</th>
-                              <th class="sorting" tabindex="2" scope="col">Correctness</th>
-                              <th class="sorting" tabindex="3" scope="col">File(s)</th>
-                            </tr>
-                          </thead>
-                        <tbody>
-                          <tr>
-                            <td>1</td>
-                            <td>08/12/2022</td>
-                            <td class="hard-color fw-semibold">0%</td>
-                            <td><a href="#">Download</a></td>
-                          </tr>
-                          <tr>
-                            <td>2</td>
-                            <td>09/12/2022</td>
-                            <td class="medium-color fw-semibold">50%</td>
-                            <td><a href="#">Download</a></td>
-                          </tr>
-                          <tr>
-                            <td>3</td>
-                            <td>09/12/2022</td>
-                            <td class="medium-color fw-semibold">50%</td>
-                            <td><a href="#">Download</a></td>
-                          </tr>
-                          <tr>
-                            <td>4</td>
-                            <td>10/12/2022</td>
-                            <td class="easy-color fw-semibold">100%</td>
-                            <td><a href="#">Download</a></td>
-                          </tr>
-                          <tr>
-                            <td>5</td>
-                            <td>11/12/2022</td>
-                            <td class="easy-color fw-semibold">100%</td>
-                            <td><a href="#">Download</a></td>
-                          </tr>
-                        
-              
-                        </tbody>
-                      
-                        </table>
-                      </div>
-                    </div>
-
-
-              </div>
             </div>
           </div>
-
         </section>
 
         <hr>

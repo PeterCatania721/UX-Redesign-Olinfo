@@ -2,7 +2,7 @@
 /* Main Page */
  /*==========*/
  .content-page {
-   display: none;
+   visibility: hidden;
 }
 
 #main-title {
@@ -171,4 +171,16 @@
 
 .tab-pane {
    height: 650px;
+}
+
+.CodeMirror { border: 1px solid silver; }
+.CodeMirror-empty.CodeMirror-focused { outline: none; }
+.CodeMirror pre.CodeMirror-placeholder { color: #999; }
+.CodeMirror {
+   margin-top: 2px;
+   height: 684px;
+}
+
+a:hover {
+   text-decoration: none;
 }

@@ -16,15 +16,10 @@
     <link rel="stylesheet" href="../codemirror/lib/codemirror.css">
     <script src="../codemirror/lib/codemirror.js"></script>
     <script src="../codemirror/addon/display/placeholder.js"></script>
-  
+    <script src="../codemirror/mode/javascript/javascript.js"></script>
 
     <link rel="stylesheet" href="../css/main.css">
 
-    <style>
-      .CodeMirror { border: 1px solid silver; }
-      .CodeMirror-empty.CodeMirror-focused { outline: none; }
-      .CodeMirror pre.CodeMirror-placeholder { color: #999; }
-    </style>
     <title>Vending Machines</title>
 </head>
 <body class="bg-light">
@@ -221,12 +216,13 @@
                       <div class="dataTables_wrapper dt-bootstrap5">
                         <div class="row dt-row">
                           <h3 class="mb-4">Previous submissions</h3>
+
                           <table id="previos-submissions" class="table dataTable table-striped mb-4 mt-3 table-responsive">
-                            <thead class="table-dark">
-                              <tr>
-                                <th class="sorting" tabindex="0" scope="col">Id</th>
-                                <th class="sorting" tabindex="1" scope="col">Date</th>
-                                <th class="sorting" tabindex="2" scope="col">Correctness</th>
+                            <thead>
+                              <tr class="head-table">
+                                <th class="sorting" tabindex="0" scope="col" style="border-right: 1px solid #eee;">Id</th>
+                                <th class="sorting" tabindex="1" scope="col" style="border-right: 1px solid #eee;">Date</th>
+                                <th class="sorting" tabindex="2" scope="col" style="border-right: 1px solid #eee;">Correctness</th>
                                 <th class="sorting" tabindex="3" scope="col">File(s)</th>
                               </tr>
                             </thead>
@@ -409,20 +405,16 @@
       </main>
     </div>
 
+
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../fontawesome/js/all.min.js"></script>
     <script src="../js/jquery-3.5.1.js"></script>
     <script src="../js/jquery.dataTables.min.js"></script>
     <script src="../js/dataTables.bootstrap5.min.js"></script>
 
-    <!-- code editor-->
-    <script>
-      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-        lineNumbers: true
-      });
-    </script>
-
     <script src="../js/main.js"></script>
     <script src="../js/problem.js"></script>
+    <script src="../js/codeEditor.js"></script>
+
 </body>
 </html>

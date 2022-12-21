@@ -110,20 +110,28 @@
 
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                   <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="text-tab" data-bs-toggle="tab" data-bs-target="#text" type="button" role="tab" aria-controls="text" aria-selected="true">Text</button>
+                    <button class="nav-link active" id="text-tab" data-bs-toggle="tab" data-bs-target="#text" type="button" role="tab" aria-controls="text" aria-selected="true">
+                      <i class="fa-solid fa-align-left me-1"></i>Text
+                    </button>
                   </li>
                   <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="attachment-tab" data-bs-toggle="tab" data-bs-target="#attachment" type="button" role="tab" aria-controls="attachment" aria-selected="false">Attachment</button>
+                    <button class="nav-link" id="attachment-tab" data-bs-toggle="tab" data-bs-target="#attachment" type="button" role="tab" aria-controls="attachment" aria-selected="false">
+                      <i class="fa-solid fa-paperclip me-1"></i> Attachments
+                    </button>
                   </li>
                   <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="statistics-tab" data-bs-toggle="tab" data-bs-target="#statistics" type="button" role="tab" aria-controls="statistics" aria-selected="false">Statistics</button>
+                    <button class="nav-link" id="statistics-tab" data-bs-toggle="tab" data-bs-target="#statistics" type="button" role="tab" aria-controls="statistics" aria-selected="false">
+                      <i class="fa-solid fa-chart-line me-1"></i> Statistics
+                    </button>
                   </li>
                   <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="submissions-tab" data-bs-toggle="tab" data-bs-target="#submissions" type="button" role="tab" aria-controls="submissions" aria-selected="false">Submissions</button>
+                    <button class="nav-link" id="submissions-tab" data-bs-toggle="tab" data-bs-target="#submissions" type="button" role="tab" aria-controls="submissions" aria-selected="false">
+                      <i class="fa-regular fa-folder-open me-1"></i> Submissions
+                    </button>
                   </li>
                 </ul>
 
-                <div class="tab-content bg-white p-3" id="myTabContent">
+                <div class="tab-content bg-white p-3 border border-top-0" id="myTabContent">
 
                   <div class="tab-pane fade show active he" id="text" role="tabpanel" aria-labelledby="home-tab" style="height: 650px;">
                     <iframe src="../pdfs/problem.pdf" style="width: 100%;height: 100%; border: none;"></iframe>
@@ -265,11 +273,11 @@
               <div class="d-flex">
                 <div>
                   <button type="button" class="btn btn-danger btn-sm btn-editor-action">
-                    <i class="fa-solid fa-trash"></i> Reset
+                    <i class="fa-solid fa-trash me-1"></i> Reset
                   </button>
     
                   <button type="button" class="btn btn-warning btn-sm btn-editor-action">
-                    <i class="fa-solid fa-upload"></i> Load File
+                    <i class="fa-solid fa-upload me-1"></i> Load File
                   </button>
                 </div>
 
@@ -296,7 +304,7 @@
 
                 <div class="ms-auto">
                   <button type="submit" class="btn btn-success btn-sm btn-editor-action">
-                    Submit <i class="fas fa-angle-double-right"></i>
+                    Submit <i class="fas fa-angle-double-right ms-1"></i>
                   </button>
                 </div>
               </div>

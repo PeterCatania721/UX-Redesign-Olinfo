@@ -1,7 +1,7 @@
 var oTable = $('#previos-submissions').DataTable( {
     dom: '<"top">rt<"bottom"lp><"clear">',
     "language": {
-        "lengthMenu": "Display _MENU_ submissions",
+        "lengthMenu": "Display _MENU_",
     }
 });
 

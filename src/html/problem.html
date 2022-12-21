@@ -20,6 +20,8 @@
 </head>
 <body class="bg-light">
     <!--NAVBAR-->
+  <div id="loader"></div>
+    <div class="content-body">
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <div class="container-fluid">
@@ -57,7 +59,7 @@
                     <ul class="navbar-nav">
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa fa-language" aria-hidden="true"></i> Language
+                          <span class="fi fi-gb"></span> English
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                             <li>
@@ -89,219 +91,241 @@
       </header>
 
     <!--MAIN-->
-    <main>
-      <section class="container mt-5">
+    
+      <main>
+        <section class="container mt-5">
 
-        <h2 class="mb-4">Problem #</h2>
+          <h2 class="mb-4">Problem #</h2>
+          <nav class="mb-4 d-none" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item" aria-current="page"><a href="problems.html">Problems</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Problem #</li>
+            </ol>
+          </nav>
+          <div class="row">
+            <div class="col-12 col-lg pe-3">
 
-        <div class="row">
-          <div class="col-12 col-lg pe-3">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="text-tab" data-bs-toggle="tab" data-bs-target="#text" type="button" role="tab" aria-controls="text" aria-selected="true">Text</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="attachment-tab" data-bs-toggle="tab" data-bs-target="#attachment" type="button" role="tab" aria-controls="attachment" aria-selected="false">Attachment</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="statistics-tab" data-bs-toggle="tab" data-bs-target="#statistics" type="button" role="tab" aria-controls="statistics" aria-selected="false">Statistics</button>
+                  </li>
+                </ul>
 
-              <ul class="nav nav-tabs" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="text-tab" data-bs-toggle="tab" data-bs-target="#text" type="button" role="tab" aria-controls="text" aria-selected="true">Text</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="attachment-tab" data-bs-toggle="tab" data-bs-target="#attachment" type="button" role="tab" aria-controls="attachment" aria-selected="false">Attachment</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="statistics-tab" data-bs-toggle="tab" data-bs-target="#statistics" type="button" role="tab" aria-controls="statistics" aria-selected="false">Statistics</button>
-                </li>
-              </ul>
+                <div class="tab-content bg-white p-3" id="myTabContent">
 
-              <div class="tab-content bg-white p-3" id="myTabContent">
-
-                <div class="tab-pane fade show active he" id="text" role="tabpanel" aria-labelledby="home-tab" style="height: 650px;">
-                  <iframe src="../pdfs/problem.pdf" style="width: 100%;height: 100%; border: none;"></iframe>
-                </div>
-
-                <div class="tab-pane fade" id="attachment" role="tabpanel" aria-labelledby="profile-tab">
-                  <div class="list-group">
-                    <!-- ngRepeat: att in task.attachments --><a ng-repeat="att in task.attachments" class="list-group-item ng-binding ng-scope" href="api/files/a495b930a1d3111cf9850f67741162fafd3ba028/input0.txt">input0.txt</a><!-- end ngRepeat: att in task.attachments --><a ng-repeat="att in task.attachments" class="list-group-item ng-binding ng-scope" href="api/files/1ca08d9b7b923696439f76acfe8e02b10c19dde4/input1.txt">input1.txt</a><!-- end ngRepeat: att in task.attachments --><a ng-repeat="att in task.attachments" class="list-group-item ng-binding ng-scope" href="api/files/3ab095637d86fc3fb100a522969ca50313b8deb6/vendingmachines.c">vendingmachines.c</a><!-- end ngRepeat: att in task.attachments --><a ng-repeat="att in task.attachments" class="list-group-item ng-binding ng-scope" href="api/files/18e112e621c37ce751ca5ab284f6b960cbd4cb5c/vendingmachines.cpp">vendingmachines.cpp</a><!-- end ngRepeat: att in task.attachments --><a ng-repeat="att in task.attachments" class="list-group-item ng-binding ng-scope" href="api/files/311353f23d547364afca6383b9459a6b0dd17a88/vendingmachines.java">vendingmachines.java</a><!-- end ngRepeat: att in task.attachments --><a ng-repeat="att in task.attachments" class="list-group-item ng-binding ng-scope" href="api/files/a8ad6b1f7d503c5d15019dc878f0a62b95457ea3/output1.txt">output1.txt</a><!-- end ngRepeat: att in task.attachments --><a ng-repeat="att in task.attachments" class="list-group-item ng-binding ng-scope" href="api/files/09fb654c17cc05b11ef53bd35aa701f6d550e8e1/output0.txt">output0.txt</a><!-- end ngRepeat: att in task.attachments --><a ng-repeat="att in task.attachments" class="list-group-item ng-binding ng-scope" href="api/files/2fa52b7d81e91e73f8a39265e8f25beecfab730f/vendingmachines.py">vendingmachines.py</a><!-- end ngRepeat: att in task.attachments --><a ng-repeat="att in task.attachments" class="list-group-item ng-binding ng-scope" href="api/files/025243b62667b18b1da8e294f5a77fb6dd0ce8c4/vendingmachines.pas">vendingmachines.pas</a><!-- end ngRepeat: att in task.attachments -->
-                  
-                    <div class="text-right">
-                      <button type="button" class="btn btn-primary btn-sm btn-editor-action mt-3 float-end">
-                        <i class="fa-solid fa-download"></i> Download all as ZIP
-                      </button>
-                    </div>
-      
+                  <div class="tab-pane fade show active he" id="text" role="tabpanel" aria-labelledby="home-tab" style="height: 650px;">
+                    <iframe src="../pdfs/problem.pdf" style="width: 100%;height: 100%; border: none;"></iframe>
                   </div>
-                </div>
 
-                <div class="tab-pane fade" id="statistics" role="tabpanel" aria-labelledby="contact-tab">
-                  <div class="panel-body">
-                    <table class="table table-bordered">
-                      <tbody><tr>
-                        <th class="ng-binding">Number of people who solved it:</th>
-                        <td class="ng-binding">187</td>
-                      </tr>
-                      <tr>
-                        <th class="ng-binding">Number of people who tried it:</th>
-                        <td class="ng-binding">228</td>
-                      </tr>
-                      <tr>
-                        <th class="ng-binding">Number of correct submissions:</th>
-                        <td class="ng-binding">289</td>
-                      </tr>
-                      <tr>
-                        <th class="ng-binding">Number of solutions submitted:</th>
-                        <td class="ng-binding">1058</td>
-                      </tr>
-                    </tbody></table>
-                    <h3 class="ng-binding">Users with the best solutions</h3>
+                  <div class="tab-pane fade" id="attachment" role="tabpanel" aria-labelledby="profile-tab">
                     <div class="list-group">
-                      <!-- ngRepeat: good in best --><a ng-repeat="good in best" class="list-group-item ng-binding ng-scope" ui-sref="user({ userId: good.username })" href="#/user/AlessioZeni" style="">
-                        <i class="fa fa-angle-right"></i> AlessioZeni
-                        <span class="pull-right ng-binding">0.007</span>
-                      </a><!-- end ngRepeat: good in best --><a ng-repeat="good in best" class="list-group-item ng-binding ng-scope" ui-sref="user({ userId: good.username })" href="#/user/v.bizzarri">
-                        <i class="fa fa-angle-right"></i> v.bizzarri
-                        <span class="pull-right ng-binding">0.014</span>
-                      </a><!-- end ngRepeat: good in best --><a ng-repeat="good in best" class="list-group-item ng-binding ng-scope" ui-sref="user({ userId: good.username })" href="#/user/MatteoArcari">
-                        <i class="fa fa-angle-right"></i> MatteoArcari
-                        <span class="pull-right ng-binding">0.018</span>
-                      </a><!-- end ngRepeat: good in best --><a ng-repeat="good in best" class="list-group-item ng-binding ng-scope" ui-sref="user({ userId: good.username })" href="#/user/AmogusEnjoyer">
-                        <i class="fa fa-angle-right"></i> AmogusEnjoyer
-                        <span class="pull-right ng-binding">0.027</span>
-                      </a><!-- end ngRepeat: good in best --><a ng-repeat="good in best" class="list-group-item ng-binding ng-scope" ui-sref="user({ userId: good.username })" href="#/user/MohAbduljalil">
-                        <i class="fa fa-angle-right"></i> MohAbduljalil
-                        <span class="pull-right ng-binding">0.027</span>
-                      </a><!-- end ngRepeat: good in best --><a ng-repeat="good in best" class="list-group-item ng-binding ng-scope" ui-sref="user({ userId: good.username })" href="#/user/Ciardu">
-                        <i class="fa fa-angle-right"></i> Ciardu
-                        <span class="pull-right ng-binding">0.028</span>
-                      </a><!-- end ngRepeat: good in best --><a ng-repeat="good in best" class="list-group-item ng-binding ng-scope" ui-sref="user({ userId: good.username })" href="#/user/marco_pellero">
-                        <i class="fa fa-angle-right"></i> marco_pellero
-                        <span class="pull-right ng-binding">0.03</span>
-                      </a><!-- end ngRepeat: good in best --><a ng-repeat="good in best" class="list-group-item ng-binding ng-scope" ui-sref="user({ userId: good.username })" href="#/user/eric">
-                        <i class="fa fa-angle-right"></i> eric
-                        <span class="pull-right ng-binding">0.031</span>
-                      </a><!-- end ngRepeat: good in best --><a ng-repeat="good in best" class="list-group-item ng-binding ng-scope" ui-sref="user({ userId: good.username })" href="#/user/fabulous.fabio">
-                        <i class="fa fa-angle-right"></i> fabulous.fabio
-                        <span class="pull-right ng-binding">0.031</span>
-                      </a><!-- end ngRepeat: good in best --><a ng-repeat="good in best" class="list-group-item ng-binding ng-scope" ui-sref="user({ userId: good.username })" href="#/user/Raoul006">
-                        <i class="fa fa-angle-right"></i> Raoul006
-                        <span class="pull-right ng-binding">0.033</span>
-                      </a><!-- end ngRepeat: good in best -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-
-          <div class="nav-item py-1 col-12 col-lg-auto">
-            <div class="vr d-none d-lg-flex h-100 mx-lg-2"></div>
-            <hr class="d-lg-none text-50">
-          </div>
-
-          <div class="col-12 col-lg-6 ps-3">
-            <div class="d-flex">
-              <div>
-                <button type="button" class="btn btn-danger btn-sm btn-editor-action">
-                  <i class="fa-solid fa-trash"></i> Reset
-                </button>
-  
-                <button type="button" class="btn btn-warning btn-sm btn-editor-action">
-                  <i class="fa-solid fa-upload"></i> Load File
-                </button>
-              </div>
-
-              <div class="nav-item py-1">
-                <div class="vr d-none d-lg-flex h-100 mx-lg-2"></div>
-                <hr class="d-lg-none text-50">
-              </div>
-
-              <div>
-                <div class="btn-group m-0 p-0">
-                  <button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle btn-editor-action" data-bs-toggle="dropdown" aria-expanded="false" style="width: 150px;">
-                    C++
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">C 11</a></li>
-                    <li><a class="dropdown-item" href="#">C++ 17</a></li>
-                    <li><a class="dropdown-item" href="#">Java</a></li>
-                    <li><a class="dropdown-item" href="#">Phython 3</a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="ms-auto">
-                <button type="submit" class="btn btn-success btn-sm btn-editor-action">
-                  Submit <i class="fas fa-angle-double-right"></i>
-                </button>
-              </div>
-            </div>
-
-            <div class="row mt-2">
-              <form>
-                <textarea id="code" name="code" ></textarea>
-              </form>
-            </div>
-
-            <div class="row mt-4">
-                <h2>Previous submissions</h2>
-
-                <div id="tableData" class="col-12 order-last">
-                  <div class="dataTables_wrapper dt-bootstrap5">
-                    <div class="row dt-row">
-                      <table id="previos-submissions" class="table dataTable table-striped mb-4 mt-3 table-responsive">
-                        <thead class="table-dark">
-                          <tr>
-                            <th class="sorting" tabindex="0" scope="col">Id</th>
-                            <th class="sorting" tabindex="1" scope="col">Date</th>
-                            <th class="sorting" tabindex="2" scope="col">Correctness</th>
-                            <th class="sorting" tabindex="3" scope="col">File(s)</th>
-                          </tr>
-                        </thead>
-                      <tbody>
-                        <tr>
-                          <td>3</td>
-                          <td>10/12/2022</td>
-                          <td class="easy-color fw-semibold">100%</td>
-                          <td><a href="#">Download</a></td>
-                        </tr>
-                        <tr>
-                          <td>2</td>
-                          <td>09/12/2022</td>
-                          <td class="medium-color fw-semibold">50%</td>
-                          <td><a href="#">Download</a></td>
-                        </tr>
-                        <tr>
-                          <td>1</td>
-                          <td>08/12/2022</td>
-                          <td class="hard-color fw-semibold">0%</td>
-                          <td><a href="#">Download</a></td>
-                        </tr>
-                      
-            
-                      </tbody>
+                      <!-- ngRepeat: att in task.attachments --><a ng-repeat="att in task.attachments" class="list-group-item ng-binding ng-scope" href="api/files/a495b930a1d3111cf9850f67741162fafd3ba028/input0.txt">input0.txt</a><!-- end ngRepeat: att in task.attachments --><a ng-repeat="att in task.attachments" class="list-group-item ng-binding ng-scope" href="api/files/1ca08d9b7b923696439f76acfe8e02b10c19dde4/input1.txt">input1.txt</a><!-- end ngRepeat: att in task.attachments --><a ng-repeat="att in task.attachments" class="list-group-item ng-binding ng-scope" href="api/files/3ab095637d86fc3fb100a522969ca50313b8deb6/vendingmachines.c">vendingmachines.c</a><!-- end ngRepeat: att in task.attachments --><a ng-repeat="att in task.attachments" class="list-group-item ng-binding ng-scope" href="api/files/18e112e621c37ce751ca5ab284f6b960cbd4cb5c/vendingmachines.cpp">vendingmachines.cpp</a><!-- end ngRepeat: att in task.attachments --><a ng-repeat="att in task.attachments" class="list-group-item ng-binding ng-scope" href="api/files/311353f23d547364afca6383b9459a6b0dd17a88/vendingmachines.java">vendingmachines.java</a><!-- end ngRepeat: att in task.attachments --><a ng-repeat="att in task.attachments" class="list-group-item ng-binding ng-scope" href="api/files/a8ad6b1f7d503c5d15019dc878f0a62b95457ea3/output1.txt">output1.txt</a><!-- end ngRepeat: att in task.attachments --><a ng-repeat="att in task.attachments" class="list-group-item ng-binding ng-scope" href="api/files/09fb654c17cc05b11ef53bd35aa701f6d550e8e1/output0.txt">output0.txt</a><!-- end ngRepeat: att in task.attachments --><a ng-repeat="att in task.attachments" class="list-group-item ng-binding ng-scope" href="api/files/2fa52b7d81e91e73f8a39265e8f25beecfab730f/vendingmachines.py">vendingmachines.py</a><!-- end ngRepeat: att in task.attachments --><a ng-repeat="att in task.attachments" class="list-group-item ng-binding ng-scope" href="api/files/025243b62667b18b1da8e294f5a77fb6dd0ce8c4/vendingmachines.pas">vendingmachines.pas</a><!-- end ngRepeat: att in task.attachments -->
                     
-                      </table>
+                      <div class="text-right">
+                        <button type="button" class="btn btn-primary btn-sm btn-editor-action mt-3 float-end">
+                          <i class="fa-solid fa-download"></i> Download all as ZIP
+                        </button>
+                      </div>
+        
                     </div>
                   </div>
 
+                  <div class="tab-pane fade" id="statistics" role="tabpanel" aria-labelledby="contact-tab">
+                    <div class="panel-body">
+                      <table class="table table-bordered">
+                        <tbody><tr>
+                          <th class="ng-binding">Number of people who solved it:</th>
+                          <td class="ng-binding">187</td>
+                        </tr>
+                        <tr>
+                          <th class="ng-binding">Number of people who tried it:</th>
+                          <td class="ng-binding">228</td>
+                        </tr>
+                        <tr>
+                          <th class="ng-binding">Number of correct submissions:</th>
+                          <td class="ng-binding">289</td>
+                        </tr>
+                        <tr>
+                          <th class="ng-binding">Number of solutions submitted:</th>
+                          <td class="ng-binding">1058</td>
+                        </tr>
+                      </tbody></table>
+                      <h3 class="ng-binding">Users with the best solutions</h3>
+                      <div class="list-group">
+                        <!-- ngRepeat: good in best --><a ng-repeat="good in best" class="list-group-item ng-binding ng-scope" ui-sref="user({ userId: good.username })" href="#/user/AlessioZeni" style="">
+                          <i class="fa fa-angle-right"></i> AlessioZeni
+                          <span class="pull-right ng-binding">0.007</span>
+                        </a><!-- end ngRepeat: good in best --><a ng-repeat="good in best" class="list-group-item ng-binding ng-scope" ui-sref="user({ userId: good.username })" href="#/user/v.bizzarri">
+                          <i class="fa fa-angle-right"></i> v.bizzarri
+                          <span class="pull-right ng-binding">0.014</span>
+                        </a><!-- end ngRepeat: good in best --><a ng-repeat="good in best" class="list-group-item ng-binding ng-scope" ui-sref="user({ userId: good.username })" href="#/user/MatteoArcari">
+                          <i class="fa fa-angle-right"></i> MatteoArcari
+                          <span class="pull-right ng-binding">0.018</span>
+                        </a><!-- end ngRepeat: good in best --><a ng-repeat="good in best" class="list-group-item ng-binding ng-scope" ui-sref="user({ userId: good.username })" href="#/user/AmogusEnjoyer">
+                          <i class="fa fa-angle-right"></i> AmogusEnjoyer
+                          <span class="pull-right ng-binding">0.027</span>
+                        </a><!-- end ngRepeat: good in best --><a ng-repeat="good in best" class="list-group-item ng-binding ng-scope" ui-sref="user({ userId: good.username })" href="#/user/MohAbduljalil">
+                          <i class="fa fa-angle-right"></i> MohAbduljalil
+                          <span class="pull-right ng-binding">0.027</span>
+                        </a><!-- end ngRepeat: good in best --><a ng-repeat="good in best" class="list-group-item ng-binding ng-scope" ui-sref="user({ userId: good.username })" href="#/user/Ciardu">
+                          <i class="fa fa-angle-right"></i> Ciardu
+                          <span class="pull-right ng-binding">0.028</span>
+                        </a><!-- end ngRepeat: good in best --><a ng-repeat="good in best" class="list-group-item ng-binding ng-scope" ui-sref="user({ userId: good.username })" href="#/user/marco_pellero">
+                          <i class="fa fa-angle-right"></i> marco_pellero
+                          <span class="pull-right ng-binding">0.03</span>
+                        </a><!-- end ngRepeat: good in best --><a ng-repeat="good in best" class="list-group-item ng-binding ng-scope" ui-sref="user({ userId: good.username })" href="#/user/eric">
+                          <i class="fa fa-angle-right"></i> eric
+                          <span class="pull-right ng-binding">0.031</span>
+                        </a><!-- end ngRepeat: good in best --><a ng-repeat="good in best" class="list-group-item ng-binding ng-scope" ui-sref="user({ userId: good.username })" href="#/user/fabulous.fabio">
+                          <i class="fa fa-angle-right"></i> fabulous.fabio
+                          <span class="pull-right ng-binding">0.031</span>
+                        </a><!-- end ngRepeat: good in best --><a ng-repeat="good in best" class="list-group-item ng-binding ng-scope" ui-sref="user({ userId: good.username })" href="#/user/Raoul006">
+                          <i class="fa fa-angle-right"></i> Raoul006
+                          <span class="pull-right ng-binding">0.033</span>
+                        </a><!-- end ngRepeat: good in best -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
 
+            <div class="nav-item py-1 col-12 col-lg-auto">
+              <div class="vr d-none d-lg-flex h-100 mx-lg-2"></div>
+              <hr class="d-lg-none text-50">
+            </div>
+
+            <div class="col-12 col-lg-6 ps-3">
+              <div class="d-flex">
+                <div>
+                  <button type="button" class="btn btn-danger btn-sm btn-editor-action">
+                    <i class="fa-solid fa-trash"></i> Reset
+                  </button>
+    
+                  <button type="button" class="btn btn-warning btn-sm btn-editor-action">
+                    <i class="fa-solid fa-upload"></i> Load File
+                  </button>
+                </div>
+
+                <span class="p-1"></span>
+                <div class="nav-item py-1">
+                  <div class="vr d-none d-lg-flex h-100 mx-lg-2"></div>
+                  <hr class="d-lg-none text-50">
+                </div>
+                <span class="p-1"></span>
+
+                <div>
+                  <div class="btn-group m-0 p-0">
+                    <button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle btn-editor-action" data-bs-toggle="dropdown" aria-expanded="false" style="width: 150px;">
+                      C++
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">C 11</a></li>
+                      <li><a class="dropdown-item" href="#">C++ 17</a></li>
+                      <li><a class="dropdown-item" href="#">Java</a></li>
+                      <li><a class="dropdown-item" href="#">Phython 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="ms-auto">
+                  <button type="submit" class="btn btn-success btn-sm btn-editor-action">
+                    Submit <i class="fas fa-angle-double-right"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="row mt-2">
+                <form>
+                  <textarea id="code" name="code" ></textarea>
+                </form>
+              </div>
+
+              <div class="row mt-4">
+                  <h2>Previous submissions</h2>
+
+                  <div id="tableData" class="col-12 order-last">
+                    <div class="dataTables_wrapper dt-bootstrap5">
+                      <div class="row dt-row">
+                        <table id="previos-submissions" class="table dataTable table-striped mb-4 mt-3 table-responsive">
+                          <thead class="table-dark">
+                            <tr>
+                              <th class="sorting" tabindex="0" scope="col">Id</th>
+                              <th class="sorting" tabindex="1" scope="col">Date</th>
+                              <th class="sorting" tabindex="2" scope="col">Correctness</th>
+                              <th class="sorting" tabindex="3" scope="col">File(s)</th>
+                            </tr>
+                          </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>08/12/2022</td>
+                            <td class="hard-color fw-semibold">0%</td>
+                            <td><a href="#">Download</a></td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>09/12/2022</td>
+                            <td class="medium-color fw-semibold">50%</td>
+                            <td><a href="#">Download</a></td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>09/12/2022</td>
+                            <td class="medium-color fw-semibold">50%</td>
+                            <td><a href="#">Download</a></td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>10/12/2022</td>
+                            <td class="easy-color fw-semibold">100%</td>
+                            <td><a href="#">Download</a></td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>11/12/2022</td>
+                            <td class="easy-color fw-semibold">100%</td>
+                            <td><a href="#">Download</a></td>
+                          </tr>
+                        
+              
+                        </tbody>
+                      
+                        </table>
+                      </div>
+                    </div>
+
+
+              </div>
             </div>
           </div>
-        </div>
 
-      </section>
+        </section>
 
-      <hr>
+        <hr>
 
-      <!--FOOTER-->
-      <footer class="container text-center mb-5">
-        <div class="row">
-            <div class="col-4 mt-5">
-                <img src="../img/aica.png" alt="logo algobadge" width="100%">
-            </div>
-            <div class="col-4 mt-5">
-                <img src="../img/logo_fo.png" alt="logo algobadge" width="100%">
-            </div>
-            <div class="col-4 mt-5">
-                <img src="../img/miur.jpeg" alt="logo algobadge" width="100%">
-            </div>
-        </div>
-      </footer>
-    </main>
+        <!--FOOTER-->
+        <footer class="container text-center mb-5">
+          <div class="row">
+              <div class="col-4 mt-5">
+                  <img src="../img/aica.png" alt="logo algobadge" width="100%">
+              </div>
+              <div class="col-4 mt-5">
+                  <img src="../img/logo_fo.png" alt="logo algobadge" width="100%">
+              </div>
+              <div class="col-4 mt-5">
+                  <img src="../img/miur.jpeg" alt="logo algobadge" width="100%">
+              </div>
+          </div>
+        </footer>
+      </main>
+    </div>
 
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../fontawesome/js/all.min.js"></script>

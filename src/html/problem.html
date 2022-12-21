@@ -272,9 +272,31 @@
             <div class="col-12 col-lg-6 ps-3">
               <div class="d-flex">
                 <div>
-                  <button type="button" class="btn btn-danger btn-sm btn-editor-action">
+                  <!-- Reset Modal Button -->
+                  <button type="button" class="btn btn-danger btn-sm btn-editor-action" data-bs-toggle="modal" data-bs-target="#resetCodeEditorModal">
                     <i class="fa-solid fa-trash me-1"></i> Reset
                   </button>
+
+                  <!-- Reset Editor Modal -->
+                  <div class="modal fade" id="resetCodeEditorModal" tabindex="-1" aria-labelledby="resetCodeEditorModal" aria-hidden="true" style="display: none;">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="resetCodeEditorModalTitle">
+                            <i class="fa-solid fa-circle-exclamation fa-2xl me-1"></i> Reset Code Editor
+                          </h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <p>Are you sure to reset the code editor? <br/> Your sumbmission will be lost!!</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                          <button type="button" class="btn btn-danger">Yes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
     
                   <button type="button" class="btn btn-warning btn-sm btn-editor-action">
                     <i class="fa-solid fa-upload me-1"></i> Load File

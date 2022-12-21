@@ -164,3 +164,7 @@
 .CodeMirror-linenumbers {
    background-color: #d8e5f4;
 }
+
+.fa-circle-exclamation{
+   color: red;
+}

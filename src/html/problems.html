@@ -284,11 +284,13 @@
                         <div class="col">
                           <div class="accordion">
                             <div class="accordion-item">
+
                               <h2 class="accordion-header" id="headingOne">
                                 <button id="btn-filters" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                   <h5 id="title-filters">Filters</h5>
                                 </button>
                               </h2>
+
                               <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                   <div class="row mt-2">
@@ -375,9 +377,30 @@
                                     <div class="col-12 mt-4">
                                       <div class="d-flex">
                                         <div>
-                                          <button id="resetFiltersButton" type="button" class="btn btn-danger btn-sm btn-editor-action">
+                                          <button id="resetFiltersButton" type="button" class="btn btn-danger btn-sm btn-editor-action" data-bs-toggle="modal" data-bs-target="#resetFiltersModal">
                                             <i class="fa-solid fa-trash"></i> Reset Filters
                                           </button>
+
+                                          <!-- Reset Filters Modal -->
+                                          <div class="modal fade" id="resetFiltersModal" tabindex="-1" aria-labelledby="resetFiltersModal" aria-hidden="true" style="display: none;">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <h1 class="modal-title fs-5" id="resetFiltersModalTitle">
+                                                    <i class="fa-solid fa-circle-exclamation fa-2xl me-1"></i> Reset All Filters
+                                                  </h1>
+                                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                  <p>Are you sure to reset all filters?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                                                  <button id="resetFiltersModelYesButton" type="button" class="btn btn-danger">Yes</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
                 
                                       </div>
                                   </div>

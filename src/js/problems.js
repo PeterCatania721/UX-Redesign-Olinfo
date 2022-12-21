@@ -57,10 +57,14 @@ $(window).resize(function() {
   }
 
   // reset filters on button click
-  $("#resetFiltersButton").click(function() {
+  $("#resetFiltersModelYesButton").click(function() {
     $("#filters-container").find("input[type=checkbox]").each(function() {
         $(this).prop("checked", false);
     });
+
+    var modelElement = document.getElementById('resetFiltersModal');
+    var myModal = bootstrap.Modal.getInstance(modelElement);
+    myModal.hide();
 
     applySearch();
   });

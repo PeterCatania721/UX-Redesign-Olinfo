@@ -12,4 +12,6 @@ $(window).on('load', function() {
     $('#previos-submissions_filter').children().css('font-size', '20px');
     $('#previos-submissions_length').children().css('font-size', '18px');
     $('#previos-submissions_length').css('margin', '2px 0 2px 0');
+    $('[data-toggle="tooltip"]').tooltip();
 });
+
